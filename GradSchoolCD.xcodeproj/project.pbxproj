@@ -1,0 +1,363 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		48721CB9167283040034E43D /* GSCDSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 48721CB8167283040034E43D /* GSCDSender.m */; };
+		4889CC7E16B304C000DA465F /* graduate.png in Resources */ = {isa = PBXBuildFile; fileRef = 4889CC7D16B304BF00DA465F /* graduate.png */; };
+		488E51D516651F2D006FEE11 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488E51D416651F2D006FEE11 /* UIKit.framework */; };
+		488E51D716651F2D006FEE11 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488E51D616651F2D006FEE11 /* Foundation.framework */; };
+		488E51D916651F2D006FEE11 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488E51D816651F2D006FEE11 /* CoreGraphics.framework */; };
+		488E51DB16651F2D006FEE11 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488E51DA16651F2D006FEE11 /* CoreData.framework */; };
+		488E51E116651F2D006FEE11 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 488E51DF16651F2D006FEE11 /* InfoPlist.strings */; };
+		488E51E316651F2D006FEE11 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 488E51E216651F2D006FEE11 /* main.m */; };
+		488E51E716651F2D006FEE11 /* GSCDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 488E51E616651F2D006FEE11 /* GSCDAppDelegate.m */; };
+		488E51EA16651F2D006FEE11 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 488E51E816651F2D006FEE11 /* MainStoryboard.storyboard */; };
+		488E51ED16651F2D006FEE11 /* GradSchoolCD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 488E51EB16651F2D006FEE11 /* GradSchoolCD.xcdatamodeld */; };
+		488E51FB16651FCA006FEE11 /* GSCDEntryScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 488E51FA16651FCA006FEE11 /* GSCDEntryScreen.m */; };
+		488E51FE16652257006FEE11 /* GSCDData.m in Sources */ = {isa = PBXBuildFile; fileRef = 488E51FD16652257006FEE11 /* GSCDData.m */; };
+		488E5201166522E7006FEE11 /* GSCDDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 488E5200166522E7006FEE11 /* GSCDDisplay.m */; };
+		488E520516652475006FEE11 /* GSCDSelectionBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 488E520416652475006FEE11 /* GSCDSelectionBox.m */; };
+		488E520816652546006FEE11 /* GSCDSelectLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 488E520716652546006FEE11 /* GSCDSelectLabel.m */; };
+		48A6F422166E47C000E36813 /* StudentInqury.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A6F421166E47C000E36813 /* StudentInqury.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		48721CB7167283040034E43D /* GSCDSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCDSender.h; sourceTree = "<group>"; };
+		48721CB8167283040034E43D /* GSCDSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCDSender.m; sourceTree = "<group>"; };
+		4889CC7D16B304BF00DA465F /* graduate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = graduate.png; path = "../../../../../Gradschool-App/Grad School/pictures/graduate.png"; sourceTree = "<group>"; };
+		488E51D016651F2D006FEE11 /* GradSchoolCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GradSchoolCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		488E51D416651F2D006FEE11 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		488E51D616651F2D006FEE11 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		488E51D816651F2D006FEE11 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		488E51DA16651F2D006FEE11 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		488E51DE16651F2D006FEE11 /* GradSchoolCD-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GradSchoolCD-Info.plist"; sourceTree = "<group>"; };
+		488E51E016651F2D006FEE11 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		488E51E216651F2D006FEE11 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		488E51E416651F2D006FEE11 /* GradSchoolCD-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GradSchoolCD-Prefix.pch"; sourceTree = "<group>"; };
+		488E51E516651F2D006FEE11 /* GSCDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSCDAppDelegate.h; sourceTree = "<group>"; };
+		488E51E616651F2D006FEE11 /* GSCDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSCDAppDelegate.m; sourceTree = "<group>"; };
+		488E51E916651F2D006FEE11 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		488E51EC16651F2D006FEE11 /* GradSchoolCD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GradSchoolCD.xcdatamodel; sourceTree = "<group>"; };
+		488E51F916651FCA006FEE11 /* GSCDEntryScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCDEntryScreen.h; sourceTree = "<group>"; };
+		488E51FA16651FCA006FEE11 /* GSCDEntryScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCDEntryScreen.m; sourceTree = "<group>"; };
+		488E51FC16652257006FEE11 /* GSCDData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCDData.h; sourceTree = "<group>"; };
+		488E51FD16652257006FEE11 /* GSCDData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCDData.m; sourceTree = "<group>"; };
+		488E51FF166522E7006FEE11 /* GSCDDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCDDisplay.h; sourceTree = "<group>"; };
+		488E5200166522E7006FEE11 /* GSCDDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCDDisplay.m; sourceTree = "<group>"; };
+		488E520316652475006FEE11 /* GSCDSelectionBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCDSelectionBox.h; sourceTree = "<group>"; };
+		488E520416652475006FEE11 /* GSCDSelectionBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCDSelectionBox.m; sourceTree = "<group>"; };
+		488E520616652545006FEE11 /* GSCDSelectLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCDSelectLabel.h; sourceTree = "<group>"; };
+		488E520716652546006FEE11 /* GSCDSelectLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCDSelectLabel.m; sourceTree = "<group>"; };
+		48A6F420166E47C000E36813 /* StudentInqury.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentInqury.h; sourceTree = "<group>"; };
+		48A6F421166E47C000E36813 /* StudentInqury.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentInqury.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		488E51CD16651F2D006FEE11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				488E51D516651F2D006FEE11 /* UIKit.framework in Frameworks */,
+				488E51D716651F2D006FEE11 /* Foundation.framework in Frameworks */,
+				488E51D916651F2D006FEE11 /* CoreGraphics.framework in Frameworks */,
+				488E51DB16651F2D006FEE11 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		488E51C516651F2D006FEE11 = {
+			isa = PBXGroup;
+			children = (
+				488E51DC16651F2D006FEE11 /* GradSchoolCD */,
+				488E51D316651F2D006FEE11 /* Frameworks */,
+				488E51D116651F2D006FEE11 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		488E51D116651F2D006FEE11 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				488E51D016651F2D006FEE11 /* GradSchoolCD.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		488E51D316651F2D006FEE11 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				488E51D416651F2D006FEE11 /* UIKit.framework */,
+				488E51D616651F2D006FEE11 /* Foundation.framework */,
+				488E51D816651F2D006FEE11 /* CoreGraphics.framework */,
+				488E51DA16651F2D006FEE11 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		488E51DC16651F2D006FEE11 /* GradSchoolCD */ = {
+			isa = PBXGroup;
+			children = (
+				4889CC7D16B304BF00DA465F /* graduate.png */,
+				488E51E516651F2D006FEE11 /* GSCDAppDelegate.h */,
+				488E51E616651F2D006FEE11 /* GSCDAppDelegate.m */,
+				488E51E816651F2D006FEE11 /* MainStoryboard.storyboard */,
+				488E51F916651FCA006FEE11 /* GSCDEntryScreen.h */,
+				488E51FA16651FCA006FEE11 /* GSCDEntryScreen.m */,
+				488E51FF166522E7006FEE11 /* GSCDDisplay.h */,
+				488E5200166522E7006FEE11 /* GSCDDisplay.m */,
+				488E51FC16652257006FEE11 /* GSCDData.h */,
+				488E51FD16652257006FEE11 /* GSCDData.m */,
+				48721CB7167283040034E43D /* GSCDSender.h */,
+				48721CB8167283040034E43D /* GSCDSender.m */,
+				488E520216652307006FEE11 /* Large Selction Box */,
+				488E51EB16651F2D006FEE11 /* GradSchoolCD.xcdatamodeld */,
+				48A6F420166E47C000E36813 /* StudentInqury.h */,
+				48A6F421166E47C000E36813 /* StudentInqury.m */,
+				488E51DD16651F2D006FEE11 /* Supporting Files */,
+			);
+			path = GradSchoolCD;
+			sourceTree = "<group>";
+		};
+		488E51DD16651F2D006FEE11 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				488E51DE16651F2D006FEE11 /* GradSchoolCD-Info.plist */,
+				488E51DF16651F2D006FEE11 /* InfoPlist.strings */,
+				488E51E216651F2D006FEE11 /* main.m */,
+				488E51E416651F2D006FEE11 /* GradSchoolCD-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		488E520216652307006FEE11 /* Large Selction Box */ = {
+			isa = PBXGroup;
+			children = (
+				488E520316652475006FEE11 /* GSCDSelectionBox.h */,
+				488E520416652475006FEE11 /* GSCDSelectionBox.m */,
+				488E520616652545006FEE11 /* GSCDSelectLabel.h */,
+				488E520716652546006FEE11 /* GSCDSelectLabel.m */,
+			);
+			name = "Large Selction Box";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		488E51CF16651F2D006FEE11 /* GradSchoolCD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 488E51F616651F2E006FEE11 /* Build configuration list for PBXNativeTarget "GradSchoolCD" */;
+			buildPhases = (
+				488E51CC16651F2D006FEE11 /* Sources */,
+				488E51CD16651F2D006FEE11 /* Frameworks */,
+				488E51CE16651F2D006FEE11 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GradSchoolCD;
+			productName = GradSchoolCD;
+			productReference = 488E51D016651F2D006FEE11 /* GradSchoolCD.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		488E51C716651F2D006FEE11 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GSCD;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = UMO;
+			};
+			buildConfigurationList = 488E51CA16651F2D006FEE11 /* Build configuration list for PBXProject "GradSchoolCD" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 488E51C516651F2D006FEE11;
+			productRefGroup = 488E51D116651F2D006FEE11 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				488E51CF16651F2D006FEE11 /* GradSchoolCD */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		488E51CE16651F2D006FEE11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				488E51E116651F2D006FEE11 /* InfoPlist.strings in Resources */,
+				488E51EA16651F2D006FEE11 /* MainStoryboard.storyboard in Resources */,
+				4889CC7E16B304C000DA465F /* graduate.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		488E51CC16651F2D006FEE11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				488E51E316651F2D006FEE11 /* main.m in Sources */,
+				488E51E716651F2D006FEE11 /* GSCDAppDelegate.m in Sources */,
+				488E51ED16651F2D006FEE11 /* GradSchoolCD.xcdatamodeld in Sources */,
+				488E51FB16651FCA006FEE11 /* GSCDEntryScreen.m in Sources */,
+				488E51FE16652257006FEE11 /* GSCDData.m in Sources */,
+				488E5201166522E7006FEE11 /* GSCDDisplay.m in Sources */,
+				488E520516652475006FEE11 /* GSCDSelectionBox.m in Sources */,
+				488E520816652546006FEE11 /* GSCDSelectLabel.m in Sources */,
+				48A6F422166E47C000E36813 /* StudentInqury.m in Sources */,
+				48721CB9167283040034E43D /* GSCDSender.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		488E51DF16651F2D006FEE11 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				488E51E016651F2D006FEE11 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		488E51E816651F2D006FEE11 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				488E51E916651F2D006FEE11 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		488E51F416651F2E006FEE11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		488E51F516651F2E006FEE11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		488E51F716651F2E006FEE11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Will Hofacker (2JG8ENLMHR)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Will Hofacker (2JG8ENLMHR)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GradSchoolCD/GradSchoolCD-Prefix.pch";
+				INFOPLIST_FILE = "GradSchoolCD/GradSchoolCD-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7A447DB2-D059-43DE-8DCA-C1AEFE61730E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7A447DB2-D059-43DE-8DCA-C1AEFE61730E";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		488E51F816651F2E006FEE11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Will Hofacker (2JG8ENLMHR)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Will Hofacker (2JG8ENLMHR)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GradSchoolCD/GradSchoolCD-Prefix.pch";
+				INFOPLIST_FILE = "GradSchoolCD/GradSchoolCD-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7A447DB2-D059-43DE-8DCA-C1AEFE61730E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7A447DB2-D059-43DE-8DCA-C1AEFE61730E";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		488E51CA16651F2D006FEE11 /* Build configuration list for PBXProject "GradSchoolCD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				488E51F416651F2E006FEE11 /* Debug */,
+				488E51F516651F2E006FEE11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		488E51F616651F2E006FEE11 /* Build configuration list for PBXNativeTarget "GradSchoolCD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				488E51F716651F2E006FEE11 /* Debug */,
+				488E51F816651F2E006FEE11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		488E51EB16651F2D006FEE11 /* GradSchoolCD.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				488E51EC16651F2D006FEE11 /* GradSchoolCD.xcdatamodel */,
+			);
+			currentVersion = 488E51EC16651F2D006FEE11 /* GradSchoolCD.xcdatamodel */;
+			path = GradSchoolCD.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 488E51C716651F2D006FEE11 /* Project object */;
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11E53" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="StudentInqury" representedClassName="StudentInqury">
+        <attribute name="anticipatedTerm" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="anticipatedYear" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="aptNum" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateOfBirth" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="findOutAbout" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="insitution" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="major" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="otherProgram" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNum" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="programsIntrestedIn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="street" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="zip" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="StudentInqury" positionX="261" positionY="189" width="128" height="285"/>
+    </elements>
+</model>
