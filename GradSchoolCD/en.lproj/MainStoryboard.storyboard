@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="5jK-KQ-VN4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="5jK-KQ-VN4">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
-        <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Entry Screen-->
         <scene sceneID="l4X-KP-olk">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ywE-IA-FTv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="5jK-KQ-VN4" customClass="GSCDEntryScreen" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UMr-D6-aiV">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1850"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="2164"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="I2b-Cc-JgC">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1850"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="2164"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="nR8-mO-D3k">
@@ -344,12 +341,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="eCk-RM-I6z">
-                                        <rect key="frame" x="22" y="917" width="728" height="666"/>
+                                        <rect key="frame" x="22" y="917" width="728" height="977"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cyan="0.28000000000000003" magenta="0.11" yellow="0.10000000000000001" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="HQe-4D-ImK">
-                                        <rect key="frame" x="41" y="955" width="695" height="596"/>
+                                        <rect key="frame" x="39" y="955" width="695" height="904"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cyan="0.31" magenta="0.14000000000000001" yellow="0.12" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                     </imageView>
@@ -375,7 +372,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="RbL-Ft-fzn">
-                                        <rect key="frame" x="74" y="1289" width="305" height="31"/>
+                                        <rect key="frame" x="71" y="1598" width="305" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -398,14 +395,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Other Program:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="mF6-Mh-DuY">
-                                        <rect key="frame" x="74" y="1257" width="140" height="24"/>
+                                        <rect key="frame" x="71" y="1566" width="140" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
                                         <color key="textColor" cyan="0.87" magenta="0.5" yellow="0.080000000000000002" black="0.089999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="How did you find out about the University of Maine’s graduate programs? " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="VeA-49-wXM">
-                                        <rect key="frame" x="74" y="1328" width="642" height="24"/>
+                                        <rect key="frame" x="71" y="1637" width="642" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
                                         <color key="textColor" cyan="0.87" magenta="0.5" yellow="0.080000000000000002" black="0.089999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
@@ -426,7 +423,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Ikb-n7-yYq" customClass="GSCDSelectionBox">
-                                        <rect key="frame" x="74" y="1092" width="636" height="157"/>
+                                        <rect key="frame" x="74" y="1092" width="636" height="458"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <gestureRecognizers/>
@@ -480,7 +477,7 @@
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="16" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="rEd-Ag-wHb">
-                                        <rect key="frame" x="77" y="1360" width="636" height="157"/>
+                                        <rect key="frame" x="74" y="1669" width="636" height="157"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -508,7 +505,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TDF-JB-V65">
-                                        <rect key="frame" x="653" y="1780" width="100" height="51"/>
+                                        <rect key="frame" x="653" y="2094" width="100" height="51"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="NEXT">
@@ -520,11 +517,11 @@
                                         </state>
                                         <connections>
                                             <action selector="display:" destination="5jK-KQ-VN4" eventType="touchDown" id="ur8-E1-wda"/>
-                                            <segue destination="AVS-1b-eTz" kind="modal" id="x3s-fx-xzf"/>
+                                            <segue destination="AVS-1b-eTz" kind="modal" id="anY-j6-7Yg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ajC-xS-Dss">
-                                        <rect key="frame" x="653" y="1779" width="100" height="51"/>
+                                        <rect key="frame" x="535" y="2094" width="100" height="51"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="NEXT">
@@ -543,11 +540,12 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" cyan="0.040000000000000001" magenta="0.040000000000000001" yellow="0.070000000000000007" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.92549019607843142" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" cyan="0.040000000000000001" magenta="0.040000000000000001" yellow="0.070000000000000007" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="589-mM-QwZ"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="AptNum" destination="A9l-B9-Tau" id="ebJ-Cp-Tgd"/>
@@ -573,6 +571,7 @@
                         <outlet property="year" destination="4ms-4i-yUp" id="MCQ-jP-o6h"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ywE-IA-FTv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="e2C-0b-Fmk">
                     <connections>
                         <action selector="viewWasTouched:" destination="Ikb-n7-yYq" id="ClA-aP-na6"/>
@@ -584,7 +583,6 @@
         <!--Display-->
         <scene sceneID="Mtb-1w-NJH">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9d1-2N-5ey" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="AVS-1b-eTz" customClass="GSCDDisplay" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pBH-pj-246">
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
@@ -723,7 +721,7 @@
                                 </state>
                                 <connections>
                                     <action selector="keepData:" destination="AVS-1b-eTz" eventType="touchDown" id="rD2-oM-1ip"/>
-                                    <segue destination="5jK-KQ-VN4" kind="modal" id="Af1-oG-MvX"/>
+                                    <segue destination="5jK-KQ-VN4" kind="modal" id="5dx-qR-6Dz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="f06-NG-737">
@@ -739,7 +737,7 @@
                                 </state>
                                 <connections>
                                     <action selector="cleardata:" destination="AVS-1b-eTz" eventType="touchDown" id="tUE-5u-QJz"/>
-                                    <segue destination="5jK-KQ-VN4" kind="modal" id="Trw-mB-Yax"/>
+                                    <segue destination="5jK-KQ-VN4" kind="modal" id="QBS-Kt-ciO"/>
                                 </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="graduate.png" id="IDF-Tv-Xkw">
@@ -766,6 +764,7 @@
                         <outlet property="zip" destination="K9x-8O-3M2" id="Ros-6F-8h3"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9d1-2N-5ey" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="586" y="228"/>
         </scene>
@@ -773,12 +772,73 @@
     <resources>
         <image name="graduate.png" width="245" height="99"/>
     </resources>
+    <classes>
+        <class className="GSCDDisplay" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GSCDDisplay.h"/>
+            <relationships>
+                <relationship kind="action" name="cleardata:"/>
+                <relationship kind="action" name="keepData:"/>
+                <relationship kind="outlet" name="anticipatedYear" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="aptNum" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="birthDate" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="city" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="country" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="emailAdress" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="entryTerm" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="institution" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="major" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="phoneNum" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="state" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="street" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="zip" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="GSCDEntryScreen" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GSCDEntryScreen.h"/>
+            <relationships>
+                <relationship kind="action" name="display:"/>
+                <relationship kind="action" name="fakeButton:"/>
+                <relationship kind="action" name="getInfo:"/>
+                <relationship kind="action" name="semesterSelect:" candidateClass="UIButton"/>
+                <relationship kind="action" name="valueChange:" candidateClass="UIStepper"/>
+                <relationship kind="outlet" name="AptNum" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="BrithDate" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="City" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Country" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Email" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Intstitution" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Major" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Name" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Other" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="PhoneNum" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="State" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Street" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Zip" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="boxOne" candidateClass="GSCDSelectionBox"/>
+                <relationship kind="outlet" name="fakeButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="fall" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="infoPage" candidateClass="GSCDDisplay"/>
+                <relationship kind="outlet" name="scroller" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="spring" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="summer" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="year" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="GSCDSelectionBox" superclassName="UIScrollView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GSCDSelectionBox.h"/>
+            <relationships>
+                <relationship kind="action" name="viewWasTouched:" candidateClass="UITapGestureRecognizer"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Trw-mB-Yax"/>
+        <segue reference="QBS-Kt-ciO"/>
     </inferredMetricsTieBreakers>
 </document>

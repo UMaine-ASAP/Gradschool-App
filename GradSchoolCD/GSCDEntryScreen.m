@@ -38,12 +38,17 @@ CGPoint origin;
     [textViews addObject:Other];
     
     //intializes the data through the appdelagte
+    if ([MyappDelegate displayMessage] == TRUE){
+        [MyappDelegate setMessageDisplay:FALSE];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"IT WORKED!!!!" message:@"We should change what it says here"delegate: self cancelButtonTitle:@"Close" otherButtonTitles: nil];
+        [alert show];
+    }
     [MyappDelegate getButton:fakeButton];
     [self fillIn];
     
     // creates the scroll view to display all the information
     [scroller setScrollEnabled:YES];
-    [scroller setContentSize:CGSizeMake(768, 1850)];
+    [scroller setContentSize:CGSizeMake(768, 2164)];
     
     // creates the box that contains the programs
     [boxOne setScrollEnabled:true];
