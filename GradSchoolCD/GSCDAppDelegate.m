@@ -21,6 +21,7 @@
 {
     // Override point for customization after application launch.
     new = TRUE;
+    mesagedisplay = FALSE;
     sender = [[GSCDSender alloc]init];
     return YES;
     [self logCoreData];
@@ -70,6 +71,14 @@
 // this return the "new" value to check if the info was just sent
 - (Boolean)isNew{
     return new;
+}
+
+- (Boolean)displayMessage{
+    return mesagedisplay;
+}
+
+- (void)setMessageDisplay:(Boolean)value{
+    mesagedisplay = value;
 }
 
 - (void)placeInfoInCoreData{

@@ -27,11 +27,11 @@
 // is called when tapped (selectionbox calls this)
 - (void) wasTapped{
     if (selected){
-        self.textColor = [UIColor blackColor];
+        self.backgroundColor = [UIColor whiteColor];
         selected = FALSE;
     }
     else {
-        self.textColor = [UIColor blueColor];
+        self.backgroundColor = [[UIColor alloc]initWithRed:(216/255.0) green:(211/255.0) blue:(199/255.0) alpha:1];
         selected = TRUE;
     }
 }

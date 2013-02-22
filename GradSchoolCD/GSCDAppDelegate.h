@@ -16,6 +16,7 @@
     GSCDData *allInfo;
     GSCDSender *sender;
     Boolean new;
+    Boolean mesagedisplay;
 }
 
 @property (strong, nonatomic) UIWindow *window;
@@ -34,6 +35,8 @@
 - (void)getButton:(UIButton *)b;
 - (void)setNew:(Boolean)value;
 - (Boolean)isNew;
+- (Boolean)displayMessage;
+- (void)setMessageDisplay:(Boolean)value;
 - (void)placeInfoInCoreData;
 - (void)logCoreData;
 

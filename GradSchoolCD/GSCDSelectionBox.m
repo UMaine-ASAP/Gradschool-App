@@ -8,6 +8,7 @@
 
 #import "GSCDSelectionBox.h"
 #import "GSCDSelectLabel.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation GSCDSelectionBox
 
@@ -22,7 +23,7 @@
 
 - (void) instatiate:(GSCDData *)mainData{
     Alldata = mainData;
-    
+
     // all the programs in a list
     strings = [[NSMutableArray alloc]init];
     [strings addObject:@"Animal Sciences"];
@@ -109,10 +110,15 @@
     labels = [[NSMutableArray alloc]init];
     labelSize = 34;
     for (int i=0; i<strings.count;i++){
-        GSCDSelectLabel *temp = [[GSCDSelectLabel alloc]initWithFrame:CGRectMake(40, labelSize*i, 590, labelSize)];
+        GSCDSelectLabel *temp = [[GSCDSelectLabel alloc]initWithFrame:CGRectMake(0, labelSize*i, 636, labelSize)];
         [temp instatiate];
         temp.text = [strings objectAtIndex:i];
         temp.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:16];
+        temp.textAlignment = UITextAlignmentCenter;
+        temp.textColor = [[UIColor alloc]initWithRed:(27/255.0) green:(79/255.0) blue:(126/255.0) alpha:1];
+        temp.layer.borderColor = [[UIColor alloc]initWithRed:(163/255.0) green:(187/255.0) blue:(193/255.0) alpha:1].CGColor;
+        temp.layer.borderWidth = 1;
+        temp.backgroundColor = [UIColor whiteColor];
         [labels addObject:temp];
     }
 }

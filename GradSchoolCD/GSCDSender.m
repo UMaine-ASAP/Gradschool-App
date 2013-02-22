@@ -39,6 +39,7 @@
     else {
         if ( [data isEqualToString:@"error"] ){
             NSLog(@"connected, but with error");
+            // this is where an error 
             return FALSE;
         }
         else {

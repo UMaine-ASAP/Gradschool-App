@@ -9,6 +9,7 @@
 #import "GSCDDisplay.h"
 #import "GSCDAppDelegate.h"
 #import "StudentInqury.h"
+#import "GSCDEntryScreen.h"
 
 @implementation GSCDDisplay
 @synthesize managedObjectContext;
@@ -54,7 +55,9 @@
 - (IBAction)cleardata:(id)sender{
     GSCDAppDelegate *MyappDelegate = [[UIApplication sharedApplication] delegate];
     [MyappDelegate setNew:TRUE];
+    [MyappDelegate setMessageDisplay:TRUE];
     [MyappDelegate placeInfoInCoreData];
+
 }
 
 // this action is attached to the edit button and tell the appadelaget to keep the data for edit
