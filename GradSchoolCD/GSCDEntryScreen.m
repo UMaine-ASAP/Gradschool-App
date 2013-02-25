@@ -40,7 +40,7 @@ CGPoint origin;
     //intializes the data through the appdelagte
     if ([MyappDelegate displayMessage] == TRUE){
         [MyappDelegate setMessageDisplay:FALSE];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"IT WORKED!!!!" message:@"We should change what it says here"delegate: self cancelButtonTitle:@"Close" otherButtonTitles: nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Application complete!" message:@"Your application has been submitted to our database."delegate: self cancelButtonTitle:@"Close" otherButtonTitles: nil];
         [alert show];
     }
     [MyappDelegate getButton:fakeButton];
@@ -55,6 +55,14 @@ CGPoint origin;
     [boxOne instatiate:[MyappDelegate getData]];
     [boxOne setContentSize:CGSizeMake(boxOne.frame.size.width, [boxOne getheight])];
     [boxOne drawlabels];
+    
+    if([MyappDelegate numDataWaiting]==0){
+        waitingDisplay.text=[NSString stringWithFormat:@"Forms Submitted"];
+        
+    }
+    else {
+        waitingDisplay.text=[NSString stringWithFormat:@"Forms waiting"];
+    }
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.

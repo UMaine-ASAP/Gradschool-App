@@ -168,6 +168,19 @@
         } 
     }
 }
+-(int)numDataWaiting{
+    // creates a request for all unsent student inquires
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription 
+                                   entityForName:@"StudentInqury" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    self.studentInquries = [context executeFetchRequest:fetchRequest error:&error];
+    
+    return studentInquries.count;
+    
+}
 
 #pragma mark - Core Data stack
 

@@ -15,6 +15,7 @@
     IBOutlet UITextView *textView;
     IBOutlet UIScrollView *scroller;
     IBOutlet UILabel *year;
+    IBOutlet UILabel *waitingDisplay;
     NSMutableArray *selections;
     NSMutableArray *textViews;
     
