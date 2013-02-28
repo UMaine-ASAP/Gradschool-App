@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol GSDCDisplayDelegate
+
+-(void) closeDisplay;
+
+@end
+
 @interface GSCDDisplay : UIViewController{
     IBOutlet UILabel *name;
     IBOutlet UILabel *birthDate;
@@ -28,8 +34,10 @@
 -(void)placeInfo; 
 -(IBAction)cleardata:(id)sender;
 -(IBAction)keepData:(id)sender;
+- (IBAction)closeView:(id)sender;
 
 @property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
 @property (nonatomic,strong) NSArray* studentInquries;
+@property id<GSDCDisplayDelegate> delegate;
 
 @end

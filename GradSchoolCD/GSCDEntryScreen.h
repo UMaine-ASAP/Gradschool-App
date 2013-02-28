@@ -10,7 +10,7 @@
 #import "GSCDSelectionBox.h"
 #import "GSCDDisplay.h"
 
-@interface GSCDEntryScreen : UIViewController{
+@interface GSCDEntryScreen : UIViewController<GSDCDisplayDelegate> {
     UITextField *name;
     IBOutlet UITextView *textView;
     IBOutlet UIScrollView *scroller;

@@ -193,6 +193,11 @@ CGPoint scrollPoint;
         
 
 }
+
+-(void) closeDisplay
+{
+    [self dismissModalViewControllerAnimated:true];
+}
     
 // Places all data after edit is pressed in the ViewControllerDisplay so it can be changed
 - (void)fillIn{
@@ -207,6 +212,15 @@ CGPoint scrollPoint;
 }
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
     // do something
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if( [segue.identifier isEqualToString:@"openDisplay"] ) {
+        GSCDDisplay* gsdcDisplay = (GSCDDisplay *) [segue destinationViewController];
+        gsdcDisplay.delegate = self;
+    }
+    
 }
 
 - (void)viewDidUnload

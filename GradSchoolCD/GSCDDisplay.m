@@ -68,6 +68,11 @@
 
 }
 
+- (IBAction)closeView:(id)sender {
+    [self.delegate closeDisplay];
+    
+}
+
 
 - (void)viewDidUnload
 {
