@@ -16,6 +16,34 @@ bool isKeyboardUp = false;
 CGPoint origin;
 CGPoint scrollPoint;
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    activeField = textField;
+   
+     
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    activeField = nil;
+  
+}
+
+
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    activeView = textView;
+    
+    
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    activeView = nil;
+    
+}
+
+
 
 // Call this method somewhere in your view controller setup code.
 - (void)registerForKeyboardNotifications
@@ -35,14 +63,18 @@ CGPoint scrollPoint;
     NSDictionary* info = [aNotification userInfo];
     CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
 	
-
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.25];
-	self.view.center = CGPointMake(originalCenter.x, originalCenter.y - kbSize.height);
-    [UIView commitAnimations];
-	return;
+    if (activeField.frame.origin.y > 1024-kbSize.height || activeView.frame.origin.y > 1024-kbSize.height ) {
+        
+    
+        
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:0.25];
+        self.view.center = CGPointMake(originalCenter.x, originalCenter.y - kbSize.height);
+        [UIView commitAnimations];
+        return;
+        
+    }
 }
-
 // Called when the UIKeyboardWillHideNotification is sent
 - (void)keyboardWillBeHidden:(NSNotification*)aNotification
 {
@@ -115,7 +147,7 @@ CGPoint scrollPoint;
     NSString *valueText = [NSString stringWithFormat:@"%d",value];
     [year setText:valueText];
     GSCDAppDelegate *MyappDelegate = [[UIApplication sharedApplication] delegate];
-    [MyappDelegate passThrought:sender.tag:[NSString stringWithFormat:@"%@@",[year text]]];
+    [MyappDelegate passThrought:sender.tag:[NSString stringWithFormat:@"%@",[year text]]];
 }
 
 // gets called when then one of the anticapted semester buttons is pressed, changes that value
@@ -156,15 +188,9 @@ CGPoint scrollPoint;
 - (IBAction)fakeButton:(id)sender{
     GSCDAppDelegate *MyappDelegate = [[UIApplication sharedApplication] delegate];
     if (![MyappDelegate OK]){
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Uh..." message:@"You Must Enter All Required fields"delegate: self cancelButtonTitle:@"Close" otherButtonTitles: nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"You Must Enter All Required fields"delegate: self cancelButtonTitle:@"Close" otherButtonTitles: nil];
         [alert show];}
         
-//    if ([PhoneNum = @"0-9"]){
-//            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Uh..." message:@"You Must Enter A Valid Phone Number"delegate: self cancelButtonTitle:@"Close" otherButtonTitles: nil];
-//            [alert show];
-//    
-//    
-//    }
 
 }
     

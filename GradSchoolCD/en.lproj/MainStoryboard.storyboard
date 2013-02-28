@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="5jK-KQ-VN4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3012" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="5jK-KQ-VN4">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
@@ -39,6 +39,13 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cyan="0.31" magenta="0.14000000000000001" yellow="0.12" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                     </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="OJZ-K2-tJa">
+                                        <rect key="frame" x="656" y="143" width="15" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Basic Information:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="eur-SY-U3a">
                                         <rect key="frame" x="52" y="103" width="284" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -62,6 +69,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="getInfo:" destination="5jK-KQ-VN4" eventType="editingDidEnd" id="Rt3-FC-qUQ"/>
+                                            <outlet property="delegate" destination="5jK-KQ-VN4" id="wPl-Ya-Cza"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Date of Birth (mm/dd/yyyy):" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="fCU-vj-xEK">
@@ -78,6 +86,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <connections>
                                             <action selector="getInfo:" destination="5jK-KQ-VN4" eventType="editingDidEnd" id="20a-h0-c91"/>
+                                            <outlet property="delegate" destination="5jK-KQ-VN4" id="fhB-I6-aac"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Phone Number:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Mqr-MV-3nx">
@@ -94,6 +103,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                         <connections>
                                             <action selector="getInfo:" destination="5jK-KQ-VN4" eventType="editingDidEnd" id="odU-c3-BW1"/>
+                                            <outlet property="delegate" destination="5jK-KQ-VN4" id="spD-kd-0aa"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Email Address:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="0eu-sw-wnV">
@@ -110,10 +120,11 @@
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                         <connections>
                                             <action selector="getInfo:" destination="5jK-KQ-VN4" eventType="editingDidEnd" id="5gp-cd-1bv"/>
+                                            <outlet property="delegate" destination="5jK-KQ-VN4" id="kp7-vG-izM"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Required *" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="fWG-hL-nCj">
-                                        <rect key="frame" x="653" y="119" width="81" height="21"/>
+                                        <rect key="frame" x="653" y="114" width="81" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -173,7 +184,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="getInfo:" destination="5jK-KQ-VN4" eventType="editingDidEnd" id="rH5-LP-3VH"/>
-                                            <outlet property="delegate" destination="H10-2P-Kty" id="Ztk-wO-ydT"/>
+                                            <outlet property="delegate" destination="5jK-KQ-VN4" id="BuN-id-xea"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="City:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="RAz-LP-3Av">
@@ -190,6 +201,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="getInfo:" destination="5jK-KQ-VN4" eventType="editingDidEnd" id="lhM-Zo-cyL"/>
+                                            <outlet property="delegate" destination="5jK-KQ-VN4" id="fdl-ck-pZz"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Country:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="DXo-e4-4FP">
@@ -206,6 +218,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="getInfo:" destination="5jK-KQ-VN4" eventType="editingDidEnd" id="vZQ-XH-EMl"/>
+                                            <outlet property="delegate" destination="5jK-KQ-VN4" id="Xae-FQ-sby"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="State:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="P0b-c4-UVY">
@@ -222,6 +235,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="getInfo:" destination="5jK-KQ-VN4" eventType="editingDidEnd" id="zbW-MY-yI4"/>
+                                            <outlet property="delegate" destination="5jK-KQ-VN4" id="hb0-df-m1C"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Apt#: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Ae5-EV-9ck">
@@ -238,6 +252,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <connections>
                                             <action selector="getInfo:" destination="5jK-KQ-VN4" eventType="editingDidEnd" id="cYI-3S-J09"/>
+                                            <outlet property="delegate" destination="5jK-KQ-VN4" id="O9b-G8-VVX"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Postal Code:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="oWK-ph-WFR">
@@ -254,6 +269,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <connections>
                                             <action selector="getInfo:" destination="5jK-KQ-VN4" eventType="editingDidEnd" id="51S-On-p7N"/>
+                                            <outlet property="delegate" destination="5jK-KQ-VN4" id="2pr-OL-Tpt"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="QEJ-SZ-Dcw">
@@ -310,6 +326,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="getInfo:" destination="5jK-KQ-VN4" eventType="editingDidEnd" id="rld-kU-LcR"/>
+                                            <outlet property="delegate" destination="5jK-KQ-VN4" id="i84-rx-gzQ"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Major:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="jdL-sk-pVj">
@@ -326,6 +343,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="getInfo:" destination="5jK-KQ-VN4" eventType="editingDidEnd" id="HIv-Ei-zqc"/>
+                                            <outlet property="delegate" destination="5jK-KQ-VN4" id="RMF-xu-xTq"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="UIa-P6-IAT">
@@ -380,6 +398,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="getInfo:" destination="5jK-KQ-VN4" eventType="editingDidEnd" id="3R4-AG-ZY4"/>
+                                            <outlet property="delegate" destination="5jK-KQ-VN4" id="Zht-QH-dFP"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Anticipated Year:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="PkD-hL-XMT">
@@ -484,6 +503,9 @@
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="5jK-KQ-VN4" id="uBA-Ht-nIS"/>
+                                        </connections>
                                     </textView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="leN-lT-47E">
                                         <rect key="frame" x="319" y="965" width="15" height="26"/>

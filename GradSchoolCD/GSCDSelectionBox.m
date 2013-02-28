@@ -125,7 +125,6 @@
 
 // when the selection box was touched it checks to see what label was touched and sets that labels state
 - (IBAction)viewWasTouched:(UITapGestureRecognizer *)sender{
-    NSLog(@" Was touched");
     for (int i=0; i<strings.count;i++){
         GSCDSelectLabel *temp = [labels objectAtIndex:i];
         if (sender.numberOfTouches == 1) {
