@@ -17,16 +17,6 @@ CGPoint origin;
 CGPoint scrollPoint;
 
 
-- (void)textFieldDidBeginEditing:(UITextField *)textField
-{
-    activeField = textField;
-}
-
-- (void)textFieldDidEndEditing:(UITextField *)textField
-{
-    activeField = nil;
-}
-
 // Call this method somewhere in your view controller setup code.
 - (void)registerForKeyboardNotifications
 {
@@ -44,23 +34,28 @@ CGPoint scrollPoint;
 - (void)keyboardWasShown:(NSNotification*)aNotification {
     NSDictionary* info = [aNotification userInfo];
     CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-    CGRect bkgndRect = activeField.superview.frame;
-    bkgndRect.size.height += kbSize.height;
-    [activeField.superview setFrame:bkgndRect];
-    [scroller setContentOffset:CGPointMake(0.0, activeField.frame.origin.y-kbSize.height) animated:YES];
+	
+
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.25];
+	self.view.center = CGPointMake(originalCenter.x, originalCenter.y - kbSize.height);
+    [UIView commitAnimations];
+	return;
 }
 
 // Called when the UIKeyboardWillHideNotification is sent
 - (void)keyboardWillBeHidden:(NSNotification*)aNotification
 {
-    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
-    scroller.contentInset = contentInsets;
-    scroller.scrollIndicatorInsets = contentInsets;
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.25];
+	self.view.center = originalCenter;
+    [UIView commitAnimations];
 }
 
 - (void)viewDidLoad
 {
     [self registerForKeyboardNotifications ];
+	originalCenter = self.view.center;
     
     GSCDAppDelegate *MyappDelegate = [[UIApplication sharedApplication] delegate];
     

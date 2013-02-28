@@ -41,7 +41,7 @@
     IBOutlet UITextField *Intstitution;
     IBOutlet UITextField *Major;
     IBOutlet UITextField *Other;
-    UITextField *activeField;
+	CGPoint originalCenter;
 }
 @property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView;
