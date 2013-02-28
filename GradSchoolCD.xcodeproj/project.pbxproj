@@ -25,7 +25,6 @@
 		488E520816652546006FEE11 /* GSCDSelectLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 488E520716652546006FEE11 /* GSCDSelectLabel.m */; };
 		48A6F422166E47C000E36813 /* StudentInqury.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A6F421166E47C000E36813 /* StudentInqury.m */; };
 		48DE57F416BB06800037334B /* graduate.png in Resources */ = {isa = PBXBuildFile; fileRef = 48DE57F316BB06800037334B /* graduate.png */; };
-		E9E5DADC16DBF6D20047BADA /* lightbulb.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E9E5DADB16DBF6D20047BADA /* lightbulb.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,7 +57,6 @@
 		48A6F420166E47C000E36813 /* StudentInqury.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentInqury.h; sourceTree = "<group>"; };
 		48A6F421166E47C000E36813 /* StudentInqury.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentInqury.m; sourceTree = "<group>"; };
 		48DE57F316BB06800037334B /* graduate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graduate.png; sourceTree = "<group>"; };
-		E9E5DADB16DBF6D20047BADA /* lightbulb.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = lightbulb.jpeg; path = ../../../Downloads/lightbulb.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +107,6 @@
 		488E51DC16651F2D006FEE11 /* GradSchoolCD */ = {
 			isa = PBXGroup;
 			children = (
-				E9E5DADB16DBF6D20047BADA /* lightbulb.jpeg */,
 				48DE57F316BB06800037334B /* graduate.png */,
 				488E51E516651F2D006FEE11 /* GSCDAppDelegate.h */,
 				488E51E616651F2D006FEE11 /* GSCDAppDelegate.m */,
@@ -208,7 +205,6 @@
 				488E51E116651F2D006FEE11 /* InfoPlist.strings in Resources */,
 				488E51EA16651F2D006FEE11 /* MainStoryboard.storyboard in Resources */,
 				48DE57F416BB06800037334B /* graduate.png in Resources */,
-				E9E5DADC16DBF6D20047BADA /* lightbulb.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -51,6 +51,7 @@
     NSLog(@"%@", [temp objectAtIndex:16]);
 }
 
+
 // this button is attached to the finish button, it resets the data 
 - (IBAction)cleardata:(id)sender{
     GSCDAppDelegate *MyappDelegate = [[UIApplication sharedApplication] delegate];
@@ -70,7 +71,6 @@
 
 - (void)viewDidUnload
 {
-    lightBulb = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

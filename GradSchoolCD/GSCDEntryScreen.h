@@ -15,7 +15,6 @@
     IBOutlet UITextView *textView;
     IBOutlet UIScrollView *scroller;
     IBOutlet UILabel *year;
-    IBOutlet UILabel *waitingDisplay;
     NSMutableArray *selections;
     NSMutableArray *textViews;
     
@@ -42,6 +41,7 @@
     IBOutlet UITextField *Intstitution;
     IBOutlet UITextField *Major;
     IBOutlet UITextField *Other;
+    UITextField *activeField;
 }
 @property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView;

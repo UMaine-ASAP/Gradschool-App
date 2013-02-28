@@ -14,10 +14,53 @@
 
 bool isKeyboardUp = false;
 CGPoint origin;
+CGPoint scrollPoint;
 
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    activeField = textField;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    activeField = nil;
+}
+
+// Call this method somewhere in your view controller setup code.
+- (void)registerForKeyboardNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillBeHidden:)
+                                                 name:UIKeyboardWillHideNotification object:nil];
+    
+}
+
+// Called when the UIKeyboardDidShowNotification is sent.
+- (void)keyboardWasShown:(NSNotification*)aNotification {
+    NSDictionary* info = [aNotification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    CGRect bkgndRect = activeField.superview.frame;
+    bkgndRect.size.height += kbSize.height;
+    [activeField.superview setFrame:bkgndRect];
+    [scroller setContentOffset:CGPointMake(0.0, activeField.frame.origin.y-kbSize.height) animated:YES];
+}
+
+// Called when the UIKeyboardWillHideNotification is sent
+- (void)keyboardWillBeHidden:(NSNotification*)aNotification
+{
+    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+    scroller.contentInset = contentInsets;
+    scroller.scrollIndicatorInsets = contentInsets;
+}
 
 - (void)viewDidLoad
 {
+    [self registerForKeyboardNotifications ];
     
     GSCDAppDelegate *MyappDelegate = [[UIApplication sharedApplication] delegate];
     
@@ -40,7 +83,7 @@ CGPoint origin;
     //intializes the data through the appdelagte
     if ([MyappDelegate displayMessage] == TRUE){
         [MyappDelegate setMessageDisplay:FALSE];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Application complete!" message:@"Your application has been submitted to our database."delegate: self cancelButtonTitle:@"Close" otherButtonTitles: nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Application Complete" message:@"Your application has been submitted!"delegate: self cancelButtonTitle:@"Close" otherButtonTitles: nil];
         [alert show];
     }
     [MyappDelegate getButton:fakeButton];
@@ -48,21 +91,13 @@ CGPoint origin;
     
     // creates the scroll view to display all the information
     [scroller setScrollEnabled:YES];
-    [scroller setContentSize:CGSizeMake(768, 2164)];
+    [scroller setContentSize:CGSizeMake(768, 1950)];
     
     // creates the box that contains the programs
     [boxOne setScrollEnabled:true];
     [boxOne instatiate:[MyappDelegate getData]];
     [boxOne setContentSize:CGSizeMake(boxOne.frame.size.width, [boxOne getheight])];
     [boxOne drawlabels];
-    
-    if([MyappDelegate numDataWaiting]==0){
-        waitingDisplay.text=[NSString stringWithFormat:@"Forms Submitted"];
-        
-    }
-    else {
-        waitingDisplay.text=[NSString stringWithFormat:@"Forms waiting"];
-    }
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -80,11 +115,11 @@ CGPoint origin;
 - (IBAction)valueChange:(UIStepper *)sender{
     CFGregorianDate currentDate = CFAbsoluteTimeGetGregorianDate(CFAbsoluteTimeGetCurrent(), CFTimeZoneCopySystem());
     int intYear = currentDate.year;
-    double value = [sender value];
-    value = intYear+value;
+    int value = [sender value];
+    value = intYear+value-1;
     [year setText:[NSString stringWithFormat:@"%d", (int)value]];
     GSCDAppDelegate *MyappDelegate = [[UIApplication sharedApplication] delegate];
-    [MyappDelegate passThrought:sender.tag:[NSString stringWithFormat:@"%@",[year text]]];
+    [MyappDelegate passThrought:sender.tag:[NSString stringWithFormat:@"%@@",[year text]]];
 }
 
 // gets called when then one of the anticapted semester buttons is pressed, changes that value
@@ -126,10 +161,17 @@ CGPoint origin;
     GSCDAppDelegate *MyappDelegate = [[UIApplication sharedApplication] delegate];
     if (![MyappDelegate OK]){
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Uh..." message:@"You Must Enter All Required fields"delegate: self cancelButtonTitle:@"Close" otherButtonTitles: nil];
-        [alert show];
-    }
-}
+        [alert show];}
+        
+//    if ([PhoneNum = @"0-9"]){
+//            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Uh..." message:@"You Must Enter A Valid Phone Number"delegate: self cancelButtonTitle:@"Close" otherButtonTitles: nil];
+//            [alert show];
+//    
+//    
+//    }
 
+}
+    
 // Places all data after edit is pressed in the ViewControllerDisplay so it can be changed
 - (void)fillIn{
     GSCDAppDelegate *MyappDelegate = [[UIApplication sharedApplication] delegate];

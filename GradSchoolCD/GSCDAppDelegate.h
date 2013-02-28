@@ -39,6 +39,6 @@
 - (void)setMessageDisplay:(Boolean)value;
 - (void)placeInfoInCoreData;
 - (void)logCoreData;
-- (int)numDataWaiting;
+- (void)antYear;
 
 @end

@@ -23,7 +23,6 @@
     IBOutlet UILabel *major;
     IBOutlet UILabel *entryTerm;
     IBOutlet UILabel *anticipatedYear;
-    __weak IBOutlet UIImageView *lightBulb;
 }
 
 -(void)placeInfo; 

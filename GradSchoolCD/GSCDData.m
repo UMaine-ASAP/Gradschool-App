@@ -24,7 +24,7 @@
             AllData[i] = [NSString stringWithFormat:@""];
         }
         else {
-            AllData[i] = [NSString stringWithFormat:@"2012"];
+            AllData[i] = [NSString stringWithFormat:@""]; //fill in year for it to automatically show up
         }
     }
     for (int i = 0; i<numOfprograms; i++){
@@ -42,7 +42,9 @@
     required[7] = 11;
     required[8] = 13;
     required[9] = 15;
-}
+    }
+
+
 
 // the name of this is missleading, it resets the object not for starting over, but for editing
 - (void)reset:(UIButton *)b{
