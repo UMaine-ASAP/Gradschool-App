@@ -19,12 +19,19 @@
     numOftextfields = 17;
     numeRequiredfields = 10;
     numOfprograms = 81;
+    
+//Adding year to this file as string "valueText"
+    CFGregorianDate currentDate = CFAbsoluteTimeGetGregorianDate(CFAbsoluteTimeGetCurrent(), CFTimeZoneCopySystem());
+    int intYear = currentDate.year;
+    //int value = [sender value];
+    int value = intYear;//+value-1;
+    NSString *valueText = [NSString stringWithFormat:@"%d",value];
     for (int i = 0; i<numOftextfields; i++){
         if (i!=15){
             AllData[i] = [NSString stringWithFormat:@""];
         }
         else {
-            AllData[i] = [NSString stringWithFormat:@""]; //fill in year for it to automatically show up
+            AllData[i] = [NSString stringWithFormat:@"%d"]; //fill in year for it to automatically show up
         }
     }
     for (int i = 0; i<numOfprograms; i++){

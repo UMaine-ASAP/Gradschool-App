@@ -111,8 +111,9 @@ CGPoint scrollPoint;
     CFGregorianDate currentDate = CFAbsoluteTimeGetGregorianDate(CFAbsoluteTimeGetCurrent(), CFTimeZoneCopySystem());
     int intYear = currentDate.year;
     int value = [sender value];
-    value = intYear+value-1;
-    [year setText:[NSString stringWithFormat:@"%d", (int)value]];
+    value = intYear+value;
+    NSString *valueText = [NSString stringWithFormat:@"%d",value];
+    [year setText:valueText];
     GSCDAppDelegate *MyappDelegate = [[UIApplication sharedApplication] delegate];
     [MyappDelegate passThrought:sender.tag:[NSString stringWithFormat:@"%@@",[year text]]];
 }
