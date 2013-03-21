@@ -123,6 +123,13 @@
     }
 }
 
+-(void) reset {
+	// unhighlight all fields
+	for (GSCDSelectLabel *sl in labels) {
+		[sl setSelected:NO];
+	}
+}
+
 // when the selection box was touched it checks to see what label was touched and sets that labels state
 - (IBAction)viewWasTouched:(UITapGestureRecognizer *)sender{
     for (int i=0; i<strings.count;i++){

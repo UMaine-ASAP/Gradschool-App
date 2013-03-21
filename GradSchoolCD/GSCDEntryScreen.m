@@ -40,7 +40,7 @@ CGPoint scrollPoint;
 - (void)textViewDidEndEditing:(UITextView *)textView
 {
     activeView = nil;
-    
+	[boxOne reset];
 }
 
 

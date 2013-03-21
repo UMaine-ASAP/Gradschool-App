@@ -19,6 +19,7 @@
     
 }
 
+-(void) reset;
 - (void) instatiate:(GSCDData *)mainData;
 - (double)getheight;
 - (void) drawlabels;

@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface GSCDSelectLabel : UILabel{
-    Boolean selected;
+    BOOL selected;
 }
 
 - (void)instatiate;
 - (void)wasTapped;
 - (Boolean)isHightlighted;
+- (void) setSelected:(BOOL)isSelected;
 
 @end

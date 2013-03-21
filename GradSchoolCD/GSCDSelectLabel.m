@@ -27,13 +27,21 @@
 // is called when tapped (selectionbox calls this)
 - (void) wasTapped{
     if (selected){
-        self.backgroundColor = [UIColor whiteColor];
-        selected = FALSE;
+		[self setSelected:NO];
     }
     else {
-        self.backgroundColor = [[UIColor alloc]initWithRed:(216/255.0) green:(211/255.0) blue:(199/255.0) alpha:1];
-        selected = TRUE;
+		[self setSelected:YES];
     }
+}
+
+- (void) setSelected:(BOOL)isSelected
+{
+	selected = isSelected;
+	if(isSelected) {
+		self.backgroundColor = [[UIColor alloc]initWithRed:(216/255.0) green:(211/255.0) blue:(199/255.0) alpha:1];
+	} else {
+		self.backgroundColor = [UIColor whiteColor];
+	}
 }
 
 // returns whether or not it is highlighted
