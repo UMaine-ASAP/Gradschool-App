@@ -82,6 +82,7 @@ CGPoint scrollPoint;
     [UIView setAnimationDuration:0.25];
 	self.view.center = originalCenter;
     [UIView commitAnimations];
+   // [UIScrollView scrollViewDidScroll];
 }
 
 - (void)viewDidLoad
@@ -107,12 +108,12 @@ CGPoint scrollPoint;
     [textViews addObject:Major];
     [textViews addObject:Other];
     
-    //intializes the data through the appdelagte
-    if ([MyappDelegate displayMessage] == TRUE){
-        [MyappDelegate setMessageDisplay:FALSE];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Application Complete" message:@"Your application has been submitted!"delegate: self cancelButtonTitle:@"Close" otherButtonTitles: nil];
-        [alert show];
-    }
+//    //intializes the data through the appdelagte
+//    if ([MyappDelegate displayMessage] == TRUE){
+//        [MyappDelegate setMessageDisplay:FALSE];
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Application Complete" message:@"Your application has been submitted!"delegate: self cancelButtonTitle:@"Close" otherButtonTitles: nil];
+//        [alert show];
+//    }
     [MyappDelegate getButton:fakeButton];
     [self fillIn];
     
@@ -210,9 +211,50 @@ CGPoint scrollPoint;
     textView.text = [temp objectAtIndex:14];
     year.text = [temp objectAtIndex:15];
 }
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    // do something
+
+//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+//        //do something
+//}
+
+//attempt at hiding keyboard when page scrolls to bottom. Not working
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(keyboardWillBeHidden:)
+                                                     name:UIKeyboardWillHideNotification object:nil];
+    }
+
+
+
+- (IBAction)unwindFromDisplayToEntryScreenSubmit:(UIStoryboardSegue *)segue {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Thank You!" message:@"Your information has been submitted!"delegate: self cancelButtonTitle:@"Close" otherButtonTitles: nil];
+    [alert show];
+    GSCDAppDelegate *MyappDelegate = [[UIApplication sharedApplication] delegate];
+    [MyappDelegate setNew:TRUE];
+    
+    // reset fields
+    Name.text = @"";
+    BrithDate.text = @"";
+    PhoneNum.text = @"";
+    Email.text = @"";
+    Street.text = @"";
+    AptNum.text = @"";
+    Zip.text = @"";
+    City.text = @"";
+    State.text = @"";
+    Country.text = @"";
+    Intstitution.text = @"";
+    Major.text = @"";
+    Other.text = @"";
+    textView.text = @"";
+    [fall setHighlighted:NO];
+    [spring setHighlighted:NO];
+    [summer setHighlighted:NO];
 }
+
+- (IBAction)unwindFromDisplayToEntryScreenEdit:(UIStoryboardSegue *)segue {
+
+}
+
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -222,6 +264,7 @@ CGPoint scrollPoint;
     }
     
 }
+
 
 - (void)viewDidUnload
 {

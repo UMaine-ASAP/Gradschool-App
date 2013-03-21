@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3012" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="d6R-AS-0A3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11E53" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="d6R-AS-0A3">
     <dependencies>
-        <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
@@ -557,7 +556,7 @@
                                         </state>
                                         <connections>
                                             <action selector="display:" destination="5jK-KQ-VN4" eventType="touchDown" id="ur8-E1-wda"/>
-                                            <segue destination="AVS-1b-eTz" kind="modal" identifier="openDisplay" id="ak7-1s-z60"/>
+                                            <segue destination="AVS-1b-eTz" kind="modal" id="s9W-Lb-gJ5"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ajC-xS-Dss">
@@ -762,6 +761,7 @@
                                 <connections>
                                     <action selector="closeView:" destination="AVS-1b-eTz" eventType="touchUpInside" id="Mpq-l7-rTq"/>
                                     <action selector="keepData:" destination="AVS-1b-eTz" eventType="touchDown" id="rD2-oM-1ip"/>
+                                    <segue destination="Vbq-1K-rsa" kind="unwind" unwindAction="unwindFromDisplayToEntryScreenEdit:" id="P5Z-X2-Lp1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="f06-NG-737">
@@ -783,6 +783,22 @@
                                 <rect key="frame" x="503" y="-3" width="245" height="99"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JtN-Zk-yac">
+                                <rect key="frame" x="651" y="873" width="97" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Finish">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cleardata:" destination="AVS-1b-eTz" eventType="touchDown" id="g8f-xM-H81"/>
+                                    <segue destination="Vbq-1K-rsa" kind="unwind" unwindAction="unwindFromDisplayToEntryScreenSubmit:" id="JZX-ly-hTh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cyan="0.040000000000000001" magenta="0.040000000000000001" yellow="0.070000000000000007" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                     </view>
@@ -804,6 +820,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9d1-2N-5ey" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Vbq-1K-rsa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="690" y="272"/>
         </scene>

@@ -46,6 +46,7 @@
      UITextView *activeView;
     
 }
+- (IBAction)unwindFromDisplayToEntryScreen:(UIStoryboardSegue *)segue;
 @property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView;
 

@@ -65,8 +65,8 @@
 - (IBAction)keepData:(id)sender{
     GSCDAppDelegate *MyappDelegate = [[UIApplication sharedApplication] delegate];
     [MyappDelegate setNew:FALSE];
-
 }
+
 
 - (IBAction)closeView:(id)sender {
     [self.delegate closeDisplay];

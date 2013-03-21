@@ -31,7 +31,7 @@
             AllData[i] = [NSString stringWithFormat:@""];
         }
         else {
-            AllData[i] = [NSString stringWithFormat:@"%d"]; //fill in year for it to automatically show up
+            AllData[i] = [NSString stringWithFormat:@"%d"]; 
         }
     }
     for (int i = 0; i<numOfprograms; i++){
