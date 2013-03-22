@@ -23,7 +23,6 @@
 //Adding year to this file as string "valueText"
     CFGregorianDate currentDate = CFAbsoluteTimeGetGregorianDate(CFAbsoluteTimeGetCurrent(), CFTimeZoneCopySystem());
     int intYear = currentDate.year;
-    //int value = [sender value];
     int value = intYear;//+value-1;
     NSString *valueText = [NSString stringWithFormat:@"%d",value];
     for (int i = 0; i<numOftextfields; i++){
@@ -122,6 +121,12 @@
         }
     }
     return temp;
+}
+
+- (void) clearData {
+    for (int i = 0; i<numOftextfields; i++){
+        AllData[i] = @"";
+    }
 }
 
 // places all the programs into a program list and sends it to the object that calls it

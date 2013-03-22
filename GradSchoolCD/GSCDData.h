@@ -30,5 +30,6 @@
 - (NSString *) getProgram:(int)pos;
 - (Boolean)isOk;
 - (NSString *)getListPrograms;
+- (void) clearData;
 
 @end

@@ -231,7 +231,10 @@ CGPoint scrollPoint;
     GSCDAppDelegate *MyappDelegate = [[UIApplication sharedApplication] delegate];
     [MyappDelegate setNew:TRUE];
     
-    // reset fields
+    //scrolls to top
+    [scroller scrollRectToVisible:CGRectMake(0, 0, 768, 1024) animated:NO];
+    
+    // reset text in textfields
     Name.text = @"";
     BrithDate.text = @"";
     PhoneNum.text = @"";
@@ -249,6 +252,15 @@ CGPoint scrollPoint;
     [fall setHighlighted:NO];
     [spring setHighlighted:NO];
     [summer setHighlighted:NO];
+    
+    //resets data entered
+    [MyappDelegate clearData];
+    
+    //resets anticipated year
+    CFGregorianDate currentDate = CFAbsoluteTimeGetGregorianDate(CFAbsoluteTimeGetCurrent(), CFTimeZoneCopySystem());
+    int intYear = currentDate.year;
+    NSString *resetYear = [NSString stringWithFormat:@"%d",intYear];
+    [year setText:resetYear];
 }
 
 - (IBAction)unwindFromDisplayToEntryScreenEdit:(UIStoryboardSegue *)segue {

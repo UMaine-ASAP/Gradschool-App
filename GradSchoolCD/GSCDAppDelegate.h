@@ -35,6 +35,7 @@
 - (void)getButton:(UIButton *)b;
 - (void)setNew:(Boolean)value;
 - (Boolean)isNew;
+- (void) clearData;
 - (Boolean)displayMessage;
 - (void)setMessageDisplay:(Boolean)value;
 - (void)placeInfoInCoreData;

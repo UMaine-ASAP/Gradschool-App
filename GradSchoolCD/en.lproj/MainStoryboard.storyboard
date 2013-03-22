@@ -828,6 +828,74 @@
     <resources>
         <image name="graduate.png" width="245" height="99"/>
     </resources>
+    <classes>
+        <class className="GSCDDisplay" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GSCDDisplay.h"/>
+            <relationships>
+                <relationship kind="action" name="cleardata:"/>
+                <relationship kind="action" name="closeView:"/>
+                <relationship kind="action" name="keepData:"/>
+                <relationship kind="outlet" name="anticipatedYear" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="aptNum" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="birthDate" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="city" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="country" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="emailAdress" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="entryTerm" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="institution" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="major" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="phoneNum" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="state" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="street" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="zip" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="GSCDEntryScreen" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GSCDEntryScreen.h"/>
+            <relationships>
+                <relationship kind="action" name="display:"/>
+                <relationship kind="action" name="fakeButton:"/>
+                <relationship kind="action" name="getInfo:"/>
+                <relationship kind="action" name="semesterSelect:" candidateClass="UIButton"/>
+                <relationship kind="action" name="unwindFromDisplayToEntryScreen:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="action" name="unwindFromDisplayToEntryScreenEdit:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="action" name="unwindFromDisplayToEntryScreenSubmit:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="action" name="valueChange:" candidateClass="UIStepper"/>
+                <relationship kind="outlet" name="AptNum" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="BrithDate" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="City" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Country" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Email" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Intstitution" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Major" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Name" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Other" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="PhoneNum" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="State" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Street" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Zip" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="boxOne" candidateClass="GSCDSelectionBox"/>
+                <relationship kind="outlet" name="fakeButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="fall" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="infoPage" candidateClass="GSCDDisplay"/>
+                <relationship kind="outlet" name="scroller" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="spring" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="summer" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="year" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="GSCDSelectionBox" superclassName="UIScrollView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GSCDSelectionBox.h"/>
+            <relationships>
+                <relationship kind="action" name="viewWasTouched:" candidateClass="UITapGestureRecognizer"/>
+            </relationships>
+        </class>
+        <class className="UIStoryboardSegue" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

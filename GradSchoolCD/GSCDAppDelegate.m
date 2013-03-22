@@ -42,6 +42,10 @@
     return allInfo;
 }
 
+- (void) clearData {
+    return [allInfo clearData];
+}
+
 // gets an array with all the data (not programs) in it
 - (NSMutableArray *)passback{
     return [allInfo getData];
