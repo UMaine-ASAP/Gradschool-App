@@ -42,7 +42,10 @@ CGPoint scrollPoint;
     activeView = nil;
 	[boxOne reset];
 }
-
+-(void)scrollViewWillBeginDraggin:(UIScrollView *)scrollView{
+    [scrollView resignFirstResponder];
+    [scroller resignFirstResponder];
+}
 
 
 // Call this method somewhere in your view controller setup code.
@@ -224,7 +227,6 @@ CGPoint scrollPoint;
     }
 
 
-
 - (IBAction)unwindFromDisplayToEntryScreenSubmit:(UIStoryboardSegue *)segue {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Thank You!" message:@"Your information has been submitted!"delegate: self cancelButtonTitle:@"Close" otherButtonTitles: nil];
     [alert show];
@@ -261,6 +263,7 @@ CGPoint scrollPoint;
     int intYear = currentDate.year;
     NSString *resetYear = [NSString stringWithFormat:@"%d",intYear];
     [year setText:resetYear];
+
 }
 
 - (IBAction)unwindFromDisplayToEntryScreenEdit:(UIStoryboardSegue *)segue {

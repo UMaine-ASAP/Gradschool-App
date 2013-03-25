@@ -23,7 +23,7 @@
 - (void) instantiate:(UIButton *)b;
 - (void) reset:(UIButton *)b;
 - (void) AddData:(int)tag:(NSString *)info;
-- (void) display;
+- (void) checkRequiredFields;
 - (void) addProgram:(int)pos:(NSString *)program;
 - (NSMutableArray *) getData;
 - (NSMutableArray *) getProgramPlaces;

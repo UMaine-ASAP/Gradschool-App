@@ -34,7 +34,7 @@
 
 // calls display in data to check to make sure all required feilds are there, sets ok in data
 - (void)send{
-    [allInfo display];
+    [allInfo checkRequiredFields];
 }
 
 // gets passes the data object to whatever calls it

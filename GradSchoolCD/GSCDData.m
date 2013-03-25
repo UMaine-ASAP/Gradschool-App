@@ -57,7 +57,7 @@
     hiddenNext = b;
     hiddenNext.hidden = FALSE;
     InfoCorrect = FALSE;
-    [self display];
+    [self checkRequiredFields];
     
     // all the required fields
     required[0] = 0;
@@ -75,11 +75,11 @@
 // called by the appdelagte to put information in the "AllData"
 - (void) AddData:(int)tag:(NSString *)info{
     AllData[tag] = info;
-    [self display];
+    [self checkRequiredFields];
 }
 
 // checks to see if all the required feilds have been filled in
-- (void) display{
+- (void) checkRequiredFields{
     Boolean allrequired = TRUE;
     Boolean aProgram = FALSE;
     
@@ -108,7 +108,7 @@
 // gets a program and adds it to the total programs array
 - (void) addProgram:(int)pos :(NSString *)program{
     programs[pos] = program;
-    [self display];
+    [self checkRequiredFields];
 }
 
 // places all the data(not programs) into a mutable array and sends it to the object that calls for it
@@ -125,8 +125,9 @@
 
 - (void) clearData {
     for (int i = 0; i<numOftextfields; i++){
-        AllData[i] = @"";
+        AllData[i] = [NSString stringWithFormat:@""];
     }
+    [self checkRequiredFields];
 }
 
 // places all the programs into a program list and sends it to the object that calls it

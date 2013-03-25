@@ -43,13 +43,16 @@
     IBOutlet UITextField *Other;
 	CGPoint originalCenter;
     UITextField *activeField;
-     UITextView *activeView;
+    UITextView *activeView;
+
     
 }
 - (IBAction)unwindFromDisplayToEntryScreen:(UIStoryboardSegue *)segue;
 @property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView;
+- (void)scrollViewWillBeginDraggin:(UIScrollView *)scrollView;
 
 
 
 @end
+
