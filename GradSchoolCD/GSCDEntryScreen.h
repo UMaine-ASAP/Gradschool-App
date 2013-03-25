@@ -10,7 +10,7 @@
 #import "GSCDSelectionBox.h"
 #import "GSCDDisplay.h"
 
-@interface GSCDEntryScreen : UIViewController<GSDCDisplayDelegate> {
+@interface GSCDEntryScreen : UIViewController<GSDCDisplayDelegate, UIScrollViewDelegate> {
     UITextField *name;
     IBOutlet UITextView *textView;
     IBOutlet UIScrollView *scroller;
@@ -47,10 +47,10 @@
 
     
 }
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView;
 - (IBAction)unwindFromDisplayToEntryScreen:(UIStoryboardSegue *)segue;
 @property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView;
-- (void)scrollViewWillBeginDraggin:(UIScrollView *)scrollView;
 
 
 

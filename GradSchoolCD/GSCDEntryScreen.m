@@ -64,8 +64,9 @@ CGPoint scrollPoint;
 - (void)keyboardWasShown:(NSNotification*)aNotification {
     NSDictionary* info = [aNotification userInfo];
     CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-	
-    if (activeField.frame.origin.y > 1024-kbSize.height || activeView.frame.origin.y > 1024-kbSize.height ) {
+
+	float yPosition = scroller.contentOffset.y;
+    if (activeField.frame.origin.y > yPosition + 950 - kbSize.height || activeView.frame.origin.y > yPosition + 950 - kbSize.height ) {
         
     
         
@@ -85,6 +86,13 @@ CGPoint scrollPoint;
 	self.view.center = originalCenter;
     [UIView commitAnimations];
    // [UIScrollView scrollViewDidScroll];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+	[activeField resignFirstResponder];
+	[textView resignFirstResponder];
+	[scroller resignFirstResponder];	
 }
 
 - (void)viewDidLoad
