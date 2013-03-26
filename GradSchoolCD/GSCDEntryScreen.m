@@ -84,7 +84,6 @@ CGPoint scrollPoint;
     [UIView setAnimationDuration:0.25];
 	self.view.center = originalCenter;
     [UIView commitAnimations];
-   // [UIScrollView scrollViewDidScroll];
 }
 
 - (void)viewDidLoad
@@ -110,12 +109,7 @@ CGPoint scrollPoint;
     [textViews addObject:Major];
     [textViews addObject:Other];
     
-//    //intializes the data through the appdelagte
-//    if ([MyappDelegate displayMessage] == TRUE){
-//        [MyappDelegate setMessageDisplay:FALSE];
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Application Complete" message:@"Your application has been submitted!"delegate: self cancelButtonTitle:@"Close" otherButtonTitles: nil];
-//        [alert show];
-//    }
+
     [MyappDelegate getButton:fakeButton];
     [self fillIn];
     
@@ -213,17 +207,6 @@ CGPoint scrollPoint;
     textView.text = [temp objectAtIndex:14];
     year.text = [temp objectAtIndex:15];
 }
-
-//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-//        //do something
-//}
-
-//attempt at hiding keyboard when page scrolls to bottom. Not working
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(keyboardWillBeHidden:)
-                                                     name:UIKeyboardWillHideNotification object:nil];
-    }
 
 
 - (IBAction)unwindFromDisplayToEntryScreenSubmit:(UIStoryboardSegue *)segue {
