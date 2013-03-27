@@ -253,6 +253,9 @@ CGPoint scrollPoint;
     int intYear = currentDate.year;
     NSString *resetYear = [NSString stringWithFormat:@"%d",intYear];
     [year setText:resetYear];
+    
+    //resets selection box
+    [boxOne reset];
 
 }
 
