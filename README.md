@@ -58,17 +58,8 @@ Gradschool-App
 	- Sendgathered data to a database
 
 
-# Tasks unfinished 
-
-- Layout and design
-- Large scrolling box should bechanged and made better
-- A completion page
-- A message telling you whendata has been placed in database
-- Better keyboard and pagenavigation
-      - “Next” button becomes hidden by keyboard at page bottom
-- Notification on entry screenfor data that has not been sent
+# Tasks for next version
 - Systems
       - Checks if the correct kind of data has been entered in the correct field
       - Notificationwhen information not entered in database
-      - Informant onunfilled required fields
 

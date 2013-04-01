@@ -81,7 +81,7 @@
                                         <rect key="frame" x="72" y="182" width="305" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                         <connections>
                                             <action selector="getInfo:" destination="5jK-KQ-VN4" eventType="editingDidEnd" id="Rt3-FC-qUQ"/>
                                             <outlet property="delegate" destination="5jK-KQ-VN4" id="wPl-Ya-Cza"/>
@@ -132,7 +132,7 @@
                                         <rect key="frame" x="411" y="263" width="305" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
                                         <connections>
                                             <action selector="getInfo:" destination="5jK-KQ-VN4" eventType="editingDidEnd" id="5gp-cd-1bv"/>
                                             <outlet property="delegate" destination="5jK-KQ-VN4" id="kp7-vG-izM"/>
@@ -196,7 +196,7 @@
                                         <rect key="frame" x="72" y="446" width="305" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                         <connections>
                                             <action selector="getInfo:" destination="5jK-KQ-VN4" eventType="editingDidEnd" id="rH5-LP-3VH"/>
                                             <outlet property="delegate" destination="5jK-KQ-VN4" id="BuN-id-xea"/>
@@ -213,7 +213,7 @@
                                         <rect key="frame" x="72" y="532" width="305" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                         <connections>
                                             <action selector="getInfo:" destination="5jK-KQ-VN4" eventType="editingDidEnd" id="lhM-Zo-cyL"/>
                                             <outlet property="delegate" destination="5jK-KQ-VN4" id="fdl-ck-pZz"/>
@@ -227,7 +227,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="kId-gb-PDb">
-                                        <rect key="frame" x="72" y="616" width="305" height="31"/>
+                                        <rect key="frame" x="72" y="619" width="305" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -247,7 +247,7 @@
                                         <rect key="frame" x="411" y="532" width="305" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                         <connections>
                                             <action selector="getInfo:" destination="5jK-KQ-VN4" eventType="editingDidEnd" id="zbW-MY-yI4"/>
                                             <outlet property="delegate" destination="5jK-KQ-VN4" id="hb0-df-m1C"/>
@@ -381,7 +381,7 @@
                                         <color key="backgroundColor" cyan="0.28000000000000003" magenta="0.11" yellow="0.10000000000000001" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="HQe-4D-ImK">
-                                        <rect key="frame" x="39" y="955" width="695" height="904"/>
+                                        <rect key="frame" x="39" y="954" width="695" height="904"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cyan="0.31" magenta="0.14000000000000001" yellow="0.12" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                     </imageView>

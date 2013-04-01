@@ -131,6 +131,10 @@ CGPoint scrollPoint;
     [boxOne setContentSize:CGSizeMake(boxOne.frame.size.width, [boxOne getheight])];
     [boxOne drawlabels];
     
+    //resets anticipated year
+    [self resetAnticipatedYear];
+
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -249,14 +253,20 @@ CGPoint scrollPoint;
     [MyappDelegate clearData];
     
     //resets anticipated year
-    CFGregorianDate currentDate = CFAbsoluteTimeGetGregorianDate(CFAbsoluteTimeGetCurrent(), CFTimeZoneCopySystem());
-    int intYear = currentDate.year;
-    NSString *resetYear = [NSString stringWithFormat:@"%d",intYear];
-    [year setText:resetYear];
+    [self resetAnticipatedYear];
     
     //resets selection box
     [boxOne reset];
 
+}
+
+-(void)resetAnticipatedYear
+{
+    //resets anticipated year
+    CFGregorianDate currentDate = CFAbsoluteTimeGetGregorianDate(CFAbsoluteTimeGetCurrent(), CFTimeZoneCopySystem());
+    int intYear = currentDate.year;
+    NSString *resetYear = [NSString stringWithFormat:@"%d",intYear];
+    [year setText:resetYear];
 }
 
 - (IBAction)unwindFromDisplayToEntryScreenEdit:(UIStoryboardSegue *)segue {
