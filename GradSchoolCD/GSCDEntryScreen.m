@@ -199,7 +199,7 @@ CGPoint scrollPoint;
     if (![MyappDelegate OK]){
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"You Must Enter All Required fields"delegate: self cancelButtonTitle:@"Close" otherButtonTitles: nil];
         [alert show];}
-        
+    //[MyappDelegate logCoreData];
 
 }
 

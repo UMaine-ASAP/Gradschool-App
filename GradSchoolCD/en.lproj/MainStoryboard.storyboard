@@ -54,13 +54,6 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" cyan="0.31" magenta="0.14000000000000001" yellow="0.12" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                     </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="OJZ-K2-tJa">
-                                        <rect key="frame" x="656" y="143" width="15" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
-                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Basic Information:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="eur-SY-U3a">
                                         <rect key="frame" x="52" y="103" width="284" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -857,14 +850,7 @@
         <class className="GSCDEntryScreen" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GSCDEntryScreen.h"/>
             <relationships>
-                <relationship kind="action" name="display:"/>
-                <relationship kind="action" name="fakeButton:"/>
-                <relationship kind="action" name="getInfo:"/>
-                <relationship kind="action" name="semesterSelect:" candidateClass="UIButton"/>
                 <relationship kind="action" name="unwindFromDisplayToEntryScreen:" candidateClass="UIStoryboardSegue"/>
-                <relationship kind="action" name="unwindFromDisplayToEntryScreenEdit:" candidateClass="UIStoryboardSegue"/>
-                <relationship kind="action" name="unwindFromDisplayToEntryScreenSubmit:" candidateClass="UIStoryboardSegue"/>
-                <relationship kind="action" name="valueChange:" candidateClass="UIStepper"/>
                 <relationship kind="outlet" name="AptNum" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="BrithDate" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="City" candidateClass="UITextField"/>
