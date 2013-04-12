@@ -72,7 +72,7 @@
     [strings addObject:@"Innovative Communication Design (ICD)"];
     [strings addObject:@"Instructional Technology"];
     [strings addObject:@"Interdisciplinary"];
-    [strings addObject:@"Interdisciplinary"];
+    [strings addObject:@"Intermedia"];
     [strings addObject:@"Kinesiology & Physical Education"];
     [strings addObject:@"Liberal Studies"];
     [strings addObject:@"Literacy Education"];
