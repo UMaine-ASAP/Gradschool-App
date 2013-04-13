@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4849CBA116BC3C370051B0BB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4849CBA016BC3C370051B0BB /* QuartzCore.framework */; };
-		48721CB9167283040034E43D /* GSCDSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 48721CB8167283040034E43D /* GSCDSender.m */; };
 		488E51D516651F2D006FEE11 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488E51D416651F2D006FEE11 /* UIKit.framework */; };
 		488E51D716651F2D006FEE11 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488E51D616651F2D006FEE11 /* Foundation.framework */; };
 		488E51D916651F2D006FEE11 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488E51D816651F2D006FEE11 /* CoreGraphics.framework */; };
@@ -18,9 +17,7 @@
 		488E51E716651F2D006FEE11 /* GSCDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 488E51E616651F2D006FEE11 /* GSCDAppDelegate.m */; };
 		488E51EA16651F2D006FEE11 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 488E51E816651F2D006FEE11 /* MainStoryboard.storyboard */; };
 		488E51ED16651F2D006FEE11 /* GradSchoolCD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 488E51EB16651F2D006FEE11 /* GradSchoolCD.xcdatamodeld */; };
-		488E51FB16651FCA006FEE11 /* GSCDEntryScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 488E51FA16651FCA006FEE11 /* GSCDEntryScreen.m */; };
 		488E51FE16652257006FEE11 /* GSCDData.m in Sources */ = {isa = PBXBuildFile; fileRef = 488E51FD16652257006FEE11 /* GSCDData.m */; };
-		488E5201166522E7006FEE11 /* GSCDDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 488E5200166522E7006FEE11 /* GSCDDisplay.m */; };
 		488E520516652475006FEE11 /* GSCDSelectionBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 488E520416652475006FEE11 /* GSCDSelectionBox.m */; };
 		488E520816652546006FEE11 /* GSCDSelectLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 488E520716652546006FEE11 /* GSCDSelectLabel.m */; };
 		48A6F422166E47C000E36813 /* StudentInqury.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A6F421166E47C000E36813 /* StudentInqury.m */; };
@@ -34,9 +31,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3FAB955D1719B63A00966C3A /* iPadFormViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iPadFormViewController.h; sourceTree = "<group>"; };
+		3FAB955E1719B63A00966C3A /* iPadFormViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPadFormViewController.m; sourceTree = "<group>"; };
+		3FAB955F1719B63A00966C3A /* iPadReviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iPadReviewViewController.h; sourceTree = "<group>"; };
+		3FAB95601719B63A00966C3A /* iPadReviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPadReviewViewController.m; sourceTree = "<group>"; };
+		3FAB95611719B64300966C3A /* URLManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLManager.h; sourceTree = "<group>"; };
+		3FAB95621719B64300966C3A /* URLManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLManager.m; sourceTree = "<group>"; };
 		4849CBA016BC3C370051B0BB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		48721CB7167283040034E43D /* GSCDSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCDSender.h; sourceTree = "<group>"; };
-		48721CB8167283040034E43D /* GSCDSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCDSender.m; sourceTree = "<group>"; };
 		488E51D016651F2D006FEE11 /* GradSchoolCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GradSchoolCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		488E51D416651F2D006FEE11 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		488E51D616651F2D006FEE11 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -50,12 +51,8 @@
 		488E51E616651F2D006FEE11 /* GSCDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSCDAppDelegate.m; sourceTree = "<group>"; };
 		488E51E916651F2D006FEE11 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		488E51EC16651F2D006FEE11 /* GradSchoolCD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GradSchoolCD.xcdatamodel; sourceTree = "<group>"; };
-		488E51F916651FCA006FEE11 /* GSCDEntryScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCDEntryScreen.h; sourceTree = "<group>"; };
-		488E51FA16651FCA006FEE11 /* GSCDEntryScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCDEntryScreen.m; sourceTree = "<group>"; };
 		488E51FC16652257006FEE11 /* GSCDData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCDData.h; sourceTree = "<group>"; };
 		488E51FD16652257006FEE11 /* GSCDData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCDData.m; sourceTree = "<group>"; };
-		488E51FF166522E7006FEE11 /* GSCDDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCDDisplay.h; sourceTree = "<group>"; };
-		488E5200166522E7006FEE11 /* GSCDDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCDDisplay.m; sourceTree = "<group>"; };
 		488E520316652475006FEE11 /* GSCDSelectionBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCDSelectionBox.h; sourceTree = "<group>"; };
 		488E520416652475006FEE11 /* GSCDSelectionBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCDSelectionBox.m; sourceTree = "<group>"; };
 		488E520616652545006FEE11 /* GSCDSelectLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCDSelectLabel.h; sourceTree = "<group>"; };
@@ -87,6 +84,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FAB95631719B64900966C3A /* iPad views */ = {
+			isa = PBXGroup;
+			children = (
+				488E520216652307006FEE11 /* Large Selction Box */,
+				488E51E816651F2D006FEE11 /* MainStoryboard.storyboard */,
+				3FAB955D1719B63A00966C3A /* iPadFormViewController.h */,
+				3FAB955E1719B63A00966C3A /* iPadFormViewController.m */,
+				3FAB955F1719B63A00966C3A /* iPadReviewViewController.h */,
+				3FAB95601719B63A00966C3A /* iPadReviewViewController.m */,
+			);
+			name = "iPad views";
+			sourceTree = "<group>";
+		};
+		3FAB95641719B66D00966C3A /* iPhone views */ = {
+			isa = PBXGroup;
+			children = (
+				A9491DE217187FA50062BF24 /* iPhoneStoryboard.storyboard */,
+			);
+			name = "iPhone views";
+			sourceTree = "<group>";
+		};
+		3FAB95651719B69200966C3A /* helper classes */ = {
+			isa = PBXGroup;
+			children = (
+				3FAB95611719B64300966C3A /* URLManager.h */,
+				3FAB95621719B64300966C3A /* URLManager.m */,
+			);
+			name = "helper classes";
+			sourceTree = "<group>";
+		};
+		3FAB95661719B6B900966C3A /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				48DE57F316BB06800037334B /* graduate.png */,
+				84A5D9BF170348950053E98B /* iPadAppIcon.png */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		3FAB95671719B6CE00966C3A /* data */ = {
+			isa = PBXGroup;
+			children = (
+				488E51FC16652257006FEE11 /* GSCDData.h */,
+				488E51FD16652257006FEE11 /* GSCDData.m */,
+				488E51EB16651F2D006FEE11 /* GradSchoolCD.xcdatamodeld */,
+				48A6F420166E47C000E36813 /* StudentInqury.h */,
+				48A6F421166E47C000E36813 /* StudentInqury.m */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
 		488E51C516651F2D006FEE11 = {
 			isa = PBXGroup;
 			children = (
@@ -123,24 +171,13 @@
 		488E51DC16651F2D006FEE11 /* GradSchoolCD */ = {
 			isa = PBXGroup;
 			children = (
-				48DE57F316BB06800037334B /* graduate.png */,
-				84A5D9BF170348950053E98B /* iPadAppIcon.png */,
 				488E51E516651F2D006FEE11 /* GSCDAppDelegate.h */,
 				488E51E616651F2D006FEE11 /* GSCDAppDelegate.m */,
-				A9491DE217187FA50062BF24 /* iPhoneStoryboard.storyboard */,
-				488E51E816651F2D006FEE11 /* MainStoryboard.storyboard */,
-				488E51F916651FCA006FEE11 /* GSCDEntryScreen.h */,
-				488E51FA16651FCA006FEE11 /* GSCDEntryScreen.m */,
-				488E51FF166522E7006FEE11 /* GSCDDisplay.h */,
-				488E5200166522E7006FEE11 /* GSCDDisplay.m */,
-				488E51FC16652257006FEE11 /* GSCDData.h */,
-				488E51FD16652257006FEE11 /* GSCDData.m */,
-				48721CB7167283040034E43D /* GSCDSender.h */,
-				48721CB8167283040034E43D /* GSCDSender.m */,
-				488E520216652307006FEE11 /* Large Selction Box */,
-				488E51EB16651F2D006FEE11 /* GradSchoolCD.xcdatamodeld */,
-				48A6F420166E47C000E36813 /* StudentInqury.h */,
-				48A6F421166E47C000E36813 /* StudentInqury.m */,
+				3FAB95671719B6CE00966C3A /* data */,
+				3FAB95661719B6B900966C3A /* resources */,
+				3FAB95651719B69200966C3A /* helper classes */,
+				3FAB95641719B66D00966C3A /* iPhone views */,
+				3FAB95631719B64900966C3A /* iPad views */,
 				488E51DD16651F2D006FEE11 /* Supporting Files */,
 			);
 			path = GradSchoolCD;
@@ -242,13 +279,10 @@
 				488E51E316651F2D006FEE11 /* main.m in Sources */,
 				488E51E716651F2D006FEE11 /* GSCDAppDelegate.m in Sources */,
 				488E51ED16651F2D006FEE11 /* GradSchoolCD.xcdatamodeld in Sources */,
-				488E51FB16651FCA006FEE11 /* GSCDEntryScreen.m in Sources */,
 				488E51FE16652257006FEE11 /* GSCDData.m in Sources */,
-				488E5201166522E7006FEE11 /* GSCDDisplay.m in Sources */,
 				488E520516652475006FEE11 /* GSCDSelectionBox.m in Sources */,
 				488E520816652546006FEE11 /* GSCDSelectLabel.m in Sources */,
 				48A6F422166E47C000E36813 /* StudentInqury.m in Sources */,
-				48721CB9167283040034E43D /* GSCDSender.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
