@@ -22,7 +22,6 @@
     // Override point for customization after application launch.
     new = TRUE;
     mesagedisplay = FALSE;
-    sender = [[GSCDSender alloc]init];
     return YES;
     [self logCoreData];
 }
@@ -112,7 +111,8 @@
 }
 
 // sends the coredata to the database
-- (void)logCoreData{
+- (void)logCoreData
+{
     
     // creates a request for all unsent student inquires
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
@@ -124,7 +124,7 @@
     self.studentInquries = [context executeFetchRequest:fetchRequest error:&error];
 
     for (StudentInqury *inqury in studentInquries){
-        if ([sender sendToURl:inqury]){
+        if ([URLManager sendToURL:@"http://kenai.asap.um.maine.edu/gradapp/save.php" withData:inqury]){
             [context deleteObject:inqury];
         }
     }

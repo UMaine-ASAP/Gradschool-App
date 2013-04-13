@@ -8,13 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "GSCDData.h"
-#import "GSCDSender.h"
+#import "URLManager.h"
 
 
 @interface GSCDAppDelegate : UIResponder <UIApplicationDelegate>{
     
     GSCDData *allInfo;
-    GSCDSender *sender;
     Boolean new;
     Boolean mesagedisplay;
 }

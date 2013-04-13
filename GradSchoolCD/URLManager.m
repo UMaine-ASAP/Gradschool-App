@@ -6,21 +6,20 @@
 //  Copyright (c) 2012 UMO. All rights reserved.
 //
 
-#import "GSCDSender.h"
+#import "URLManager.h"
 
-@implementation GSCDSender
+@implementation URLManager
 
 
-// sends the data from the core data to the URL also tells if it was sucessful
-- (Boolean) sendToURl:(StudentInqury *)inquiry{
-    
++(BOOL) sendToURL:(NSString *)url withData:(StudentInqury *)inquiry {
+
     NSString *post = [self createPost:inquiry];
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     
     NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    [request setURL:[NSURL URLWithString:@"http://kenai.asap.um.maine.edu/gradapp/save.php"]];
+    [request setURL:[NSURL URLWithString:url]];
     [request setHTTPMethod:@"POST"];
     [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
@@ -34,30 +33,30 @@
     
     if ( [data isEqualToString:@"success"] ) {
         NSLog(@"the data is in the data base");
-        return TRUE;
+        return YES;
     }
     else {
         if ( [data isEqualToString:@"error"] ){
             NSLog(@"connected, but with error");
             // this is where an error 
-            return FALSE;
+            return NO;
         }
         else {
             NSLog(@"didn't connect at all to php script");
-            return FALSE;
+            return NO;
         }
     }
 }
 
 // removes parts of strings that could possibly mess up the URL
-- (NSString *) urlEncodeValue:(NSString *)str{
++(NSString *) urlEncodeValue:(NSString *)str{
     NSString *result = (__bridge_transfer NSString *) CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (__bridge CFStringRef)str, NULL, CFSTR("?=&+"), kCFStringEncodingUTF8);
     return result;
 
 }
 
 // creates a sting that can be sent as post data
-- (NSString *)createPost:(StudentInqury *)inquiry{
++(NSString *)createPost:(StudentInqury *)inquiry{
 
     NSString *post = [NSString stringWithFormat:@"anticipatedTerm=%@&anticipatedYear=%@&aptNum=%@&city=%@&country=%@&dateOfBith=%@&email=%@&findOutAbout=%@&institution=%@&major=%@&name=%@&otherProgram=%@&phoneNum=%@&programsIntrestedIn=%@&state=%@&street=%@&zip=%@", 
                       [self urlEncodeValue:inquiry.anticipatedTerm],
