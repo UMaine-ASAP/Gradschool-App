@@ -11,22 +11,33 @@
 
 @implementation StudentInqury
 
-@dynamic anticipatedTerm;
-@dynamic anticipatedYear;
-@dynamic aptNum;
-@dynamic city;
-@dynamic country;
+@dynamic isCompleted;
+
+@dynamic name;
 @dynamic dateOfBirth;
+@dynamic phoneNum;
 @dynamic email;
-@dynamic findOutAbout;
+
+@dynamic street;
+@dynamic aptNum;
+@dynamic zip;
+@dynamic city;
+@dynamic state;
+@dynamic country;
+
 @dynamic insitution;
 @dynamic major;
-@dynamic name;
-@dynamic otherProgram;
-@dynamic phoneNum;
+
+@dynamic anticipatedTerm;
+@dynamic anticipatedYear;
 @dynamic programsIntrestedIn;
-@dynamic state;
-@dynamic street;
-@dynamic zip;
+@dynamic otherProgram;
+@dynamic findOutAbout;
+
+
+-(BOOL) isComplete
+{
+	
+}
 
 @end
