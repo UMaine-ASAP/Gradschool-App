@@ -4,7 +4,8 @@ App Features
 Current App Features
 
 -The fields are collected by an array in EntryScreen and is sent to Data to 
-make sure the required fields are filled out. Also deals with the "Fake button"
+make sure the required fields are filled out. Also deals with the "Fake button". 
+Perhaps combine and separate the different functions to different pages.
 
 -SelectLabel and SelectionBox deal with the Programs that student is interested
 in. Convert this to TableView?
