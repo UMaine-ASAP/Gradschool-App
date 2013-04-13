@@ -11,6 +11,7 @@
         <attribute name="findOutAbout" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="insitution" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="isCompleted" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isSent" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="major" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="otherProgram" optional="YES" attributeType="String" syncable="YES"/>
@@ -22,6 +23,6 @@
         <userInfo/>
     </entity>
     <elements>
-        <element name="StudentInqury" positionX="189" positionY="3657" width="146" height="315"/>
+        <element name="StudentInqury" positionX="189" positionY="3657" width="146" height="330"/>
     </elements>
 </model>

@@ -12,6 +12,7 @@
 @implementation StudentInqury
 
 @dynamic isCompleted;
+@dynamic isSent;
 
 @dynamic name;
 @dynamic dateOfBirth;

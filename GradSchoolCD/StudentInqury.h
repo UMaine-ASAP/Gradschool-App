@@ -13,7 +13,7 @@
 @interface StudentInqury : NSManagedObject
 
 @property (nonatomic) Boolean isCompleted;
-
+@property (nonatomic) Boolean isSent;
 
 /* Basic Information */
 
