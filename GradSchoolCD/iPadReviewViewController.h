@@ -14,7 +14,7 @@
 
 @end
 
-@interface GSCDDisplay : UIViewController{
+@interface iPadReviewViewController : UIViewController{
     IBOutlet UILabel *name;
     IBOutlet UILabel *birthDate;
     IBOutlet UILabel *phoneNum;

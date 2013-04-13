@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "GSCDSelectionBox.h"
-#import "GSCDDisplay.h"
+#import "iPadReviewViewController.h"
 
-@interface GSCDEntryScreen : UIViewController<GSDCDisplayDelegate, UIScrollViewDelegate> {
+@interface iPadFormViewController : UIViewController<GSDCDisplayDelegate, UIScrollViewDelegate> {
     UITextField *name;
     IBOutlet UITextView *textView;
     IBOutlet UIScrollView *scroller;
@@ -19,7 +19,7 @@
     NSMutableArray *textViews;
     
     IBOutlet GSCDSelectionBox *boxOne;
-    IBOutlet GSCDDisplay *infoPage;
+    IBOutlet iPadReviewViewController *infoPage;
     
     IBOutlet UIButton *fall;
     IBOutlet UIButton *spring;

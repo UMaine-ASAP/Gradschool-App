@@ -6,10 +6,10 @@
 //  Copyright (c) 2012 UMO. All rights reserved.
 //
 
-#import "GSCDEntryScreen.h"
+#import "iPadFormViewController.h"
 #import "GSCDAppDelegate.h"
 
-@implementation GSCDEntryScreen
+@implementation iPadFormViewController
 @synthesize managedObjectContext;
 
 bool isKeyboardUp = false;
@@ -277,7 +277,7 @@ CGPoint scrollPoint;
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if( [segue.identifier isEqualToString:@"openDisplay"] ) {
-        GSCDDisplay* gsdcDisplay = (GSCDDisplay *) [segue destinationViewController];
+        iPadReviewViewController* gsdcDisplay = (iPadReviewViewController *) [segue destinationViewController];
         gsdcDisplay.delegate = self;
     }
     

@@ -6,12 +6,12 @@
 //  Copyright (c) 2012 UMO. All rights reserved.
 //
 
-#import "GSCDDisplay.h"
+#import "iPadReviewViewController.h"
 #import "GSCDAppDelegate.h"
 #import "StudentInqury.h"
-#import "GSCDEntryScreen.h"
+#import "iPadFormViewController.h"
 
-@implementation GSCDDisplay
+@implementation iPadReviewViewController
 @synthesize managedObjectContext;
 @synthesize studentInquries;
 
