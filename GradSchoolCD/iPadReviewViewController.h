@@ -29,6 +29,8 @@
     IBOutlet UILabel *major;
     IBOutlet UILabel *entryTerm;
     IBOutlet UILabel *anticipatedYear;
+    IBOutlet UILabel *programsInterestedIn;
+    
 }
 
 -(void)placeInfo; 

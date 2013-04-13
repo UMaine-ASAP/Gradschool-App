@@ -452,7 +452,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Ikb-n7-yYq" customClass="GSCDSelectionBox">
-                                        <rect key="frame" x="74" y="1092" width="636" height="458"/>
+                                        <rect key="frame" x="77" y="1092" width="636" height="458"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <gestureRecognizers/>
@@ -659,6 +659,13 @@
                                 <color key="textColor" cyan="0.87" magenta="0.5" yellow="0.080000000000000002" black="0.089999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="16" contentMode="left" text="Programs Interested In:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ZA7-CX-vf8">
+                                <rect key="frame" x="70" y="596" width="628" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
+                                <color key="textColor" cyan="0.87" magenta="0.5" yellow="0.080000000000000002" black="0.089999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Anticipated Term of Entry:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="wfA-Ca-YWA">
                                 <rect key="frame" x="70" y="532" width="628" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -810,6 +817,7 @@
                         <outlet property="major" destination="iss-HH-pqZ" id="h7a-h8-kwP"/>
                         <outlet property="name" destination="dGz-eD-Cph" id="7IV-ib-HBu"/>
                         <outlet property="phoneNum" destination="tb2-fy-YHG" id="FBJ-T9-JBo"/>
+                        <outlet property="programsInterestedIn" destination="ZA7-CX-vf8" id="dvr-84-4Nb"/>
                         <outlet property="state" destination="cIK-Eu-3La" id="hXJ-cr-Iia"/>
                         <outlet property="street" destination="WCM-4u-k7u" id="SSy-WR-MhB"/>
                         <outlet property="zip" destination="K9x-8O-3M2" id="Ros-6F-8h3"/>
@@ -892,6 +900,7 @@
             </relationships>
         </class>
     </classes>
+
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
