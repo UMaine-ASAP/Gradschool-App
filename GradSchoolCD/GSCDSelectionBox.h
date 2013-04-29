@@ -7,20 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GSCDData.h"
+#import "StudentInquiry.h"
 
 @interface GSCDSelectionBox : UIScrollView{
     
     NSMutableArray *strings;
     NSMutableArray *labels;
     int labelSize;
-    
-    GSCDData *Alldata;
-    
+	
+	StudentInquiry *inquiry;
 }
 
 -(void) reset;
-- (void) instatiate:(GSCDData *)mainData;
+- (void) instatiate:(StudentInquiry *)anInquiry;
 - (double)getheight;
 - (void) drawlabels;
 - (IBAction)viewWasTouched:(UITapGestureRecognizer *)sender;

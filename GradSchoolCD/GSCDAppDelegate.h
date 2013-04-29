@@ -7,38 +7,37 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GSCDData.h"
 #import "URLManager.h"
+#import "StudentInquiry.h"
 
 
-@interface GSCDAppDelegate : UIResponder <UIApplicationDelegate>{
-    
-    GSCDData *allInfo;
-    Boolean new;
-    Boolean mesagedisplay;
-}
-
+@interface GSCDAppDelegate : UIResponder <UIApplicationDelegate>
 @property (strong, nonatomic) UIWindow *window;
+
+/** Core data stuff */
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-@property (nonatomic,strong) NSArray* studentInquries;
 
-- (void)saveContext;
-- (NSURL *)applicationDocumentsDirectory;
-- (void) passThrought:(int)tag:(NSString *)answer;
-- (NSMutableArray *) passback;
-- (void) send;
-- (GSCDData *) getData;
-- (Boolean)OK;
-- (void)getButton:(UIButton *)b;
-- (void)setNew:(Boolean)value;
-- (Boolean)isNew;
-- (void) clearData;
-- (Boolean)displayMessage;
-- (void)setMessageDisplay:(Boolean)value;
-- (void)placeInfoInCoreData;
-- (void)logCoreData;
-- (void)antYear;
+/** The data object with the current form information */
+@property (strong, nonatomic) StudentInquiry *currentInquiry;
+
+
+
+-(void) startForm;
+
+-(void) restartForm;
+
+/**
+ * Submit information to server
+ *
+ * If submission is successful, deletes data, otherwise stores for processing at another time.
+ *
+ * @param    Inquiry    The data object
+ *
+ * @return    BOOL    whether the operation was successful or not
+ */
+-(BOOL) submitInquiryToServer;
+
 
 @end

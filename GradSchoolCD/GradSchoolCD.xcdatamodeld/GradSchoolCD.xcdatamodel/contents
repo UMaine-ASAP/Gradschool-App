@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="11G63" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="StudentInqury" representedClassName="StudentInqury">
+    <entity name="StudentInquiry" representedClassName="StudentInquiry">
         <attribute name="anticipatedTerm" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="anticipatedYear" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="aptNum" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="aptNumber" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dateOfBirth" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="findOutAbout" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="insitution" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="howLearnedAboutUMaine" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="isCompleted" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="isSent" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="major" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="otherProgram" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="phoneNum" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="programsIntrestedIn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="programsInterestedIn" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="street" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="undergraduateInstitution" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="undergraduateMajor" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="zip" optional="YES" attributeType="String" syncable="YES"/>
         <userInfo/>
     </entity>
     <elements>
-        <element name="StudentInqury" positionX="189" positionY="3657" width="146" height="330"/>
+        <element name="StudentInquiry" positionX="0" positionY="0" width="128" height="330"/>
     </elements>
 </model>

@@ -7,7 +7,6 @@
 //
 
 #import "GSCDAppDelegate.h"
-#import "StudentInqury.h"
 
 @implementation GSCDAppDelegate
 
@@ -15,149 +14,106 @@
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
-@synthesize studentInquries;
 
+
+
+# pragma mark - App Delegate Functionality
+
+/**
+ * Sends any unsent data in the database (Internal Function)
+ */
+-(void) submitAllUnsentInquiriesToServer
+{
+    
+    // Get all unsent inquiries from core data
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"StudentInquiry" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    NSArray *studentInquries = [context executeFetchRequest:fetchRequest error:&error];
+	
+	// Send the inquiries
+    for (StudentInquiry *inquiry in studentInquries){
+		[self submitInquiryToServer:inquiry];
+	}
+}
+
+-(BOOL) submitInquiryToServer
+{
+	return [self submitInquiryToServer:self.currentInquiry];
+}
+
+
+/**
+ * Send a specific inquiry to the server (Internal Function)
+ */
+-(BOOL) submitInquiryToServer:(StudentInquiry *)inquiry
+{
+	if ( [URLManager sendToURL:@"http://kenai.asap.um.maine.edu/gradapp/save.php" withData:inquiry] )
+	{
+		[[self managedObjectContext] deleteObject:inquiry];
+		return YES;
+	}
+	inquiry.isSent = NO;
+	
+	return NO;
+}
+
+-(void) startForm
+{
+	// Create a new inquiry
+	_currentInquiry = [NSEntityDescription
+						insertNewObjectForEntityForName:@"StudentInquiry"
+						inManagedObjectContext:self.managedObjectContext];
+	[self restartForm];
+}
+
+
+-(void) restartForm
+{
+	[_currentInquiry resetValues];
+}
+
+# pragma mark - App States
+
+/**
+ * App starting for the first time
+ */
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    new = TRUE;
-    mesagedisplay = FALSE;
-    return YES;
-    [self logCoreData];
+    [self submitAllUnsentInquiriesToServer];
+	
+	[self startForm];
+    return NO;
 }
 
-// gets an anwswer to a question from the viewcontroller and sends it to the data object
-- (void)passThrought:(int)tag:(NSString *)answer{
-    [allInfo AddData:tag:answer];    
-}
-
-// calls display in data to check to make sure all required feilds are there, sets ok in data
-- (void)send{
-    [allInfo checkRequiredFields];
-}
-
-// gets passes the data object to whatever calls it
-- (GSCDData *)getData{
-    return allInfo;
-}
-
-- (void) clearData {
-    return [allInfo clearData];
-}
-
-// gets an array with all the data (not programs) in it
-- (NSMutableArray *)passback{
-    return [allInfo getData];
-}
-
-// pass the "Ok" through from data depending on whether or not all requireds have been entered
-- (Boolean)OK{
-    return [allInfo isOk];
-}
-
-// this when called intitalizes the data object depending on whether or not you just sent all your information
-- (void)getButton:(UIButton *)b{
-    if (new){
-        allInfo = [[GSCDData alloc]init];
-        [allInfo instantiate:b];
-    }
-    else {
-        [allInfo reset:b];
-    }
-}
-
-// this sets a boolean to the appdelagate so it know whethter or not to reset values after sending the information
-- (void)setNew:(Boolean)value{
-    new = value;
-}
-
-// this return the "new" value to check if the info was just sent
-- (Boolean)isNew{
-    return new;
-}
-
-- (Boolean)displayMessage{
-    return mesagedisplay;
-}
-
-- (void)setMessageDisplay:(Boolean)value{
-    mesagedisplay = value;
-}
-
-- (void)placeInfoInCoreData{
-    NSMutableArray *data = [allInfo getData];
-    
-    NSManagedObjectContext *context = [self managedObjectContext];
-    StudentInqury *studentInqury = [NSEntityDescription insertNewObjectForEntityForName:@"StudentInqury" inManagedObjectContext:context];
-    studentInqury.name = [data objectAtIndex:0];
-    studentInqury.dateOfBirth = [data objectAtIndex:1];
-    studentInqury.phoneNum = [data objectAtIndex:2];
-    studentInqury.email = [data objectAtIndex:3];
-    studentInqury.street = [data objectAtIndex:4];
-    studentInqury.aptNum = [data objectAtIndex:5];
-    studentInqury.zip = [data objectAtIndex:6];
-    studentInqury.city = [data objectAtIndex:7];
-    studentInqury.state = [data objectAtIndex:8];
-    studentInqury.country = [data objectAtIndex:9];
-    studentInqury.insitution = [data objectAtIndex:10];
-    studentInqury.major = [data objectAtIndex:11];
-    studentInqury.otherProgram = [data objectAtIndex:12];
-    studentInqury.anticipatedTerm = [data objectAtIndex:13];
-    studentInqury.findOutAbout = [data objectAtIndex:14];
-    studentInqury.anticipatedYear = [data objectAtIndex:15];
-    studentInqury.programsIntrestedIn = [allInfo getListPrograms];
-    
-    [self logCoreData];
-}
-
-// sends the coredata to the database
-- (void)logCoreData
-{
-    
-    // creates a request for all unsent student inquires
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSManagedObjectContext *context = [self managedObjectContext];
-    NSEntityDescription *entity = [NSEntityDescription 
-                                   entityForName:@"StudentInqury" inManagedObjectContext:context];
-    [fetchRequest setEntity:entity];
-    NSError *error;
-    self.studentInquries = [context executeFetchRequest:fetchRequest error:&error];
-
-    for (StudentInqury *inqury in studentInquries){
-        if ([URLManager sendToURL:@"http://kenai.asap.um.maine.edu/gradapp/save.php" withData:inqury]){
-            [context deleteObject:inqury];
-        }
-    }
-}
-							
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
+/**
+ * App was reactivated
+ */
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    [self logCoreData];
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [self submitAllUnsentInquiriesToServer];
 }
 
+/**
+ * App is about to quit
+ */
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
 }
+
+
+/* ========================================= */
+/* = Core Data = */
+/* ========================================= */
+
+
+#pragma mark - Core Data stack
 
 - (void)saveContext
 {
@@ -165,15 +121,14 @@
     NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
     if (managedObjectContext != nil) {
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-             // Replace this implementation with code to handle the error appropriately.
-             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+			// Replace this implementation with code to handle the error appropriately.
+			// abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
-        } 
+        }
     }
 }
 
-#pragma mark - Core Data stack
 
 // Returns the managed object context for the application.
 // If the context doesn't already exist, it is created and bound to the persistent store coordinator for the application.
@@ -212,6 +167,9 @@
     }
     
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"GradSchoolCD.sqlite"];
+	
+	// uncomment and run once to delete incompatible core data model
+	[[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
     
     NSError *error = nil;
     __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
@@ -219,7 +177,7 @@
         /*
          Replace this implementation with code to handle the error appropriately.
          
-         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
          
          Typical reasons for an error here include:
          * The persistent store is not accessible;
@@ -231,9 +189,8 @@
          
          If you encounter schema incompatibility errors during development, you can reduce their frequency by:
          * Simply deleting the existing store:
-         [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil]
          
-         * Performing automatic lightweight migration by passing the following dictionary as the options parameter: 
+         * Performing automatic lightweight migration by passing the following dictionary as the options parameter:
          [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption, [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
          
          Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
@@ -241,7 +198,7 @@
          */
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
-    }    
+    }
     
     return __persistentStoreCoordinator;
 }
@@ -253,5 +210,32 @@
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
+
+
+#pragma mark - Unused Methods
+
+/* ========================================= */
+/* = Unused methods = */
+/* ========================================= */
+
+
+- (void)applicationWillResignActive:(UIApplication *)application
+{
+    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+}
+
+- (void)applicationDidEnterBackground:(UIApplication *)application
+{
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+}
+
+- (void)applicationWillEnterForeground:(UIApplication *)application
+{
+    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+}
+
+
 
 @end

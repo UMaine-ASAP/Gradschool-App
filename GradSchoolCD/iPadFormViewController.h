@@ -9,50 +9,22 @@
 #import <UIKit/UIKit.h>
 #import "GSCDSelectionBox.h"
 #import "iPadReviewViewController.h"
+#import "GSCDAppDelegate.h"
+#import "StudentInquiry.h"
 
-@interface iPadFormViewController : UIViewController<GSDCDisplayDelegate, UIScrollViewDelegate> {
-    UITextField *name;
-    IBOutlet UITextView *textView;
-    IBOutlet UIScrollView *scroller;
-    IBOutlet UILabel *year;
-    NSMutableArray *selections;
-    NSMutableArray *textViews;
-    
-    IBOutlet GSCDSelectionBox *boxOne;
-    IBOutlet iPadReviewViewController *infoPage;
-    
-    IBOutlet UIButton *fall;
-    IBOutlet UIButton *spring;
-    IBOutlet UIButton *summer;
-    
-    IBOutlet UIButton *fakeButton;
-    
-    // all the textfeilds
-    IBOutlet UITextField *Name;
-    IBOutlet UITextField *BrithDate;
-    IBOutlet UITextField *PhoneNum;
-    IBOutlet UITextField *Email;
-    IBOutlet UITextField *Street;
-    IBOutlet UITextField *AptNum;
-    IBOutlet UITextField *Zip;
-    IBOutlet UITextField *City;
-    IBOutlet UITextField *State;
-    IBOutlet UITextField *Country;
-    IBOutlet UITextField *Intstitution;
-    IBOutlet UITextField *Major;
-    IBOutlet UITextField *Other;
-	CGPoint originalCenter;
-    UITextField *activeField;
-    UITextView *activeView;
+@interface iPadFormViewController : UIViewController<GSDCDisplayDelegate, UIScrollViewDelegate>
 
-    
-}
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView;
-- (IBAction)unwindFromDisplayToEntryScreen:(UIStoryboardSegue *)segue;
-@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
+@property (nonatomic, weak) StudentInquiry *currentInquiry;
 
 
+- (IBAction)gotoReviewScreen:(id)sender;
+- (IBAction)updateAnticipatedYear:(UIStepper *)sender;
+- (IBAction)semesterSelect:(UISegmentedControl *)sender;
+
+/**
+ * Sets all fields back to their default state
+ */
+-(void) reset;
 
 @end
 

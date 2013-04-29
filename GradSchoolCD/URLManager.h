@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "StudentInqury.h"
+#import "StudentInquiry.h"
 
 /**
  * Sends 
@@ -16,6 +16,6 @@
 @interface URLManager : NSObject
 
 // sends the data from the core data to the URL also tells if it was sucessful
-+ (BOOL) sendToURL:(NSString *)url withData:(StudentInqury *)inquiry;
++ (BOOL) sendToURL:(NSString *)url withData:(StudentInquiry *)inquiry;
 
 @end

@@ -8,13 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ * Used to set the parent view so that this can be closed
+ */
 @protocol GSDCDisplayDelegate
 
 -(void) closeDisplay;
 
 @end
 
-@interface iPadReviewViewController : UIViewController{
+@interface iPadReviewViewController : UIViewController
+{
     IBOutlet UILabel *name;
     IBOutlet UILabel *birthDate;
     IBOutlet UILabel *phoneNum;
@@ -30,16 +34,19 @@
     IBOutlet UILabel *entryTerm;
     IBOutlet UILabel *anticipatedYear;
     IBOutlet UILabel *programsInterestedIn;
-    
 }
 
--(void)placeInfo; 
--(IBAction)cleardata:(id)sender;
--(IBAction)keepData:(id)sender;
-- (IBAction)closeView:(id)sender;
+/**
+ * Closes the current view and returns to the last view
+ */
+-(IBAction)previousView:(id)sender;
 
-@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
-@property (nonatomic,strong) NSArray* studentInquries;
+/**
+ * Submits data to the server
+ */
+-(IBAction)submitData:(id)sender;
+
+
 @property id<GSDCDisplayDelegate> delegate;
 
 @end

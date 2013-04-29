@@ -21,8 +21,8 @@
     return self;
 }
 
-- (void) instatiate:(GSCDData *)mainData{
-    Alldata = mainData;
+- (void) instatiate:(StudentInquiry *)anInquiry{
+    inquiry = anInquiry;
 
     // all the programs in a list
     strings = [[NSMutableArray alloc]init];
@@ -146,10 +146,10 @@
             }
         }
         if ([temp isHightlighted]){
-            [Alldata addProgram:i :[strings objectAtIndex:i]];
+            [inquiry addProgram:[strings objectAtIndex:i]];
         }
         else {
-            [Alldata addProgram:i :[NSString stringWithFormat:@""]];
+            [inquiry addProgram:[NSString stringWithFormat:@""]];
         }
     }
 }
@@ -162,9 +162,11 @@
 
 // draws the labels into the scrollview/selction box
 - (void) drawlabels{
+	NSMutableArray *programs = [inquiry programs];
+	
     for (int i=0; i<strings.count;i++){
         GSCDSelectLabel *temp = [labels objectAtIndex:i];
-        if ([Alldata getProgram:i] != [NSString stringWithFormat:@""]){
+		if ([programs indexOfObject:[strings objectAtIndex:i]] != NSNotFound) {
             [temp wasTapped];
         }
         [self addSubview:temp];

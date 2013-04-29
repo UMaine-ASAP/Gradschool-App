@@ -8,12 +8,10 @@
 
 #import "iPadReviewViewController.h"
 #import "GSCDAppDelegate.h"
-#import "StudentInqury.h"
+#import "StudentInquiry.h"
 #import "iPadFormViewController.h"
 
 @implementation iPadReviewViewController
-@synthesize managedObjectContext;
-@synthesize studentInquries;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,50 +25,62 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self placeInfo];
-}
-
-// gets the data and places it in next to the right label
--(void)placeInfo{
+	
+	
+	// Get inquiry object
     GSCDAppDelegate *MyappDelegate = [[UIApplication sharedApplication] delegate];
-    NSMutableArray *temp = [MyappDelegate passback];
-    name.text = [NSString stringWithFormat:@"Name: %@", [temp objectAtIndex:0]];
-    birthDate.text = [NSString stringWithFormat:@"Birth Date: %@", [temp objectAtIndex:1]];
-    phoneNum.text = [NSString stringWithFormat:@"Phone Number: %@", [temp objectAtIndex:2]];
-    emailAdress.text = [NSString stringWithFormat:@"Email Address: %@", [temp objectAtIndex:3]];
-    street.text = [NSString stringWithFormat:@"Street: %@", [temp objectAtIndex:4]];
-    aptNum.text = [NSString stringWithFormat:@"Apt#: %@", [temp objectAtIndex:5]];
-    zip.text = [NSString stringWithFormat:@"Postal Code: %@", [temp objectAtIndex:6]];
-    city.text = [NSString stringWithFormat:@"City: %@", [temp objectAtIndex:7]];
-    state.text = [NSString stringWithFormat:@"State: %@", [temp objectAtIndex:8]];
-    country.text = [NSString stringWithFormat:@"Country: %@", [temp objectAtIndex:9]];
-    institution.text = [NSString stringWithFormat:@"Institution: %@", [temp objectAtIndex:10]];
-    major.text = [NSString stringWithFormat:@"Major: %@", [temp objectAtIndex:11]];
-    entryTerm.text = [NSString stringWithFormat:@"Anticipated Entry Term: %@", [temp objectAtIndex:13]];
-    anticipatedYear.text = [NSString stringWithFormat:@"Anticipated Year: %@", [temp objectAtIndex:15]];
-    NSLog(@"%@", [temp objectAtIndex:16]);
+    StudentInquiry *inquiry = MyappDelegate.currentInquiry;
+
+	// Place data
+    name.text            = [NSString stringWithFormat:@"Name: %@", inquiry.name];
+    birthDate.text       = [NSString stringWithFormat:@"Birth Date: %@", inquiry.dateOfBirth];
+    phoneNum.text        = [NSString stringWithFormat:@"Phone Number: %@", inquiry.phoneNumber];
+    emailAdress.text     = [NSString stringWithFormat:@"Email Address: %@", inquiry.email];
+    street.text          = [NSString stringWithFormat:@"Street: %@", inquiry.street];
+    aptNum.text          = [NSString stringWithFormat:@"Apt#: %@", inquiry.aptNumber];
+    zip.text             = [NSString stringWithFormat:@"Postal Code: %@", inquiry.zip];
+    city.text            = [NSString stringWithFormat:@"City: %@", inquiry.city];
+    state.text           = [NSString stringWithFormat:@"State: %@", inquiry.state];
+    country.text         = [NSString stringWithFormat:@"Country: %@", inquiry.country];
+    institution.text     = [NSString stringWithFormat:@"Institution: %@", inquiry.undergraduateInstitution];
+    major.text           = [NSString stringWithFormat:@"Major: %@", inquiry.undergraduateMajor];
+    entryTerm.text       = [NSString stringWithFormat:@"Anticipated Entry Term: %@", inquiry.anticipatedTerm];
+    anticipatedYear.text = [NSString stringWithFormat:@"Anticipated Year: %@", inquiry.anticipatedYear];
+
+
+    NSMutableString *interestedPrograms = [[NSMutableString alloc] init];
+    for (NSString *program in inquiry.programs) {
+        if ([interestedPrograms length] > 0) {
+            [interestedPrograms appendFormat:@", %@", program];
+        } else {
+            [interestedPrograms appendString:program];
+        }
+    }
+    
+    // Add other program
+    if(inquiry.otherProgram != nil) {
+        [interestedPrograms appendFormat:@", %@", inquiry.otherProgram];
+    }
+    
+    programsInterestedIn.text = interestedPrograms;
 }
 
 
 // this button is attached to the finish button, it resets the data 
-- (IBAction)cleardata:(id)sender{
-    GSCDAppDelegate *MyappDelegate = [[UIApplication sharedApplication] delegate];
-    [MyappDelegate setNew:TRUE];
-    [MyappDelegate setMessageDisplay:TRUE];
-    [MyappDelegate placeInfoInCoreData];
+- (IBAction)submitData:(id)sender{
+
+    // Ask the App delegate to send the data
+	GSCDAppDelegate *myAppDelegate = [[UIApplication sharedApplication] delegate];
+
+    [myAppDelegate submitInquiryToServer];
+	
+	[myAppDelegate restartForm];
 
 }
 
 // this action is attached to the edit button and tell the appadelaget to keep the data for edit
-- (IBAction)keepData:(id)sender{
-    GSCDAppDelegate *MyappDelegate = [[UIApplication sharedApplication] delegate];
-    [MyappDelegate setNew:FALSE];
-}
-
-
-- (IBAction)closeView:(id)sender {
+- (IBAction)previousView:(id)sender{
     [self.delegate closeDisplay];
-    
 }
 
 

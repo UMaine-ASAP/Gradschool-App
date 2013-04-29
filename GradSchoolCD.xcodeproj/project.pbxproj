@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FC8BE121719BE4A007FA26C /* URLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8BE111719BE4A007FA26C /* URLManager.m */; };
+		3FC8BE171719BEDC007FA26C /* iPadFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8BE141719BEDC007FA26C /* iPadFormViewController.m */; };
+		3FC8BE181719BEDC007FA26C /* iPadReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8BE161719BEDC007FA26C /* iPadReviewViewController.m */; };
 		4849CBA116BC3C370051B0BB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4849CBA016BC3C370051B0BB /* QuartzCore.framework */; };
 		488E51D516651F2D006FEE11 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488E51D416651F2D006FEE11 /* UIKit.framework */; };
 		488E51D716651F2D006FEE11 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488E51D616651F2D006FEE11 /* Foundation.framework */; };
@@ -17,10 +20,9 @@
 		488E51E716651F2D006FEE11 /* GSCDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 488E51E616651F2D006FEE11 /* GSCDAppDelegate.m */; };
 		488E51EA16651F2D006FEE11 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 488E51E816651F2D006FEE11 /* MainStoryboard.storyboard */; };
 		488E51ED16651F2D006FEE11 /* GradSchoolCD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 488E51EB16651F2D006FEE11 /* GradSchoolCD.xcdatamodeld */; };
-		488E51FE16652257006FEE11 /* GSCDData.m in Sources */ = {isa = PBXBuildFile; fileRef = 488E51FD16652257006FEE11 /* GSCDData.m */; };
 		488E520516652475006FEE11 /* GSCDSelectionBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 488E520416652475006FEE11 /* GSCDSelectionBox.m */; };
 		488E520816652546006FEE11 /* GSCDSelectLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 488E520716652546006FEE11 /* GSCDSelectLabel.m */; };
-		48A6F422166E47C000E36813 /* StudentInqury.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A6F421166E47C000E36813 /* StudentInqury.m */; };
+		48A6F422166E47C000E36813 /* StudentInquiry.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A6F421166E47C000E36813 /* StudentInquiry.m */; };
 		48DE57F416BB06800037334B /* graduate.png in Resources */ = {isa = PBXBuildFile; fileRef = 48DE57F316BB06800037334B /* graduate.png */; };
 		8473D81C17034E9F00EC88A6 /* iPadAppIconRetina.png in Resources */ = {isa = PBXBuildFile; fileRef = 8473D81B17034E9F00EC88A6 /* iPadAppIconRetina.png */; };
 		8473D81E1703645F00EC88A6 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8473D81D1703645F00EC88A6 /* Default-Portrait~ipad.png */; };
@@ -31,12 +33,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3FAB955D1719B63A00966C3A /* iPadFormViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iPadFormViewController.h; sourceTree = "<group>"; };
-		3FAB955E1719B63A00966C3A /* iPadFormViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPadFormViewController.m; sourceTree = "<group>"; };
-		3FAB955F1719B63A00966C3A /* iPadReviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iPadReviewViewController.h; sourceTree = "<group>"; };
-		3FAB95601719B63A00966C3A /* iPadReviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPadReviewViewController.m; sourceTree = "<group>"; };
-		3FAB95611719B64300966C3A /* URLManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLManager.h; sourceTree = "<group>"; };
-		3FAB95621719B64300966C3A /* URLManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URLManager.m; sourceTree = "<group>"; };
+		3FC8BE101719BE4A007FA26C /* URLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLManager.h; sourceTree = "<group>"; };
+		3FC8BE111719BE4A007FA26C /* URLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLManager.m; sourceTree = "<group>"; };
+		3FC8BE131719BEDC007FA26C /* iPadFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPadFormViewController.h; sourceTree = "<group>"; };
+		3FC8BE141719BEDC007FA26C /* iPadFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPadFormViewController.m; sourceTree = "<group>"; };
+		3FC8BE151719BEDC007FA26C /* iPadReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPadReviewViewController.h; sourceTree = "<group>"; };
+		3FC8BE161719BEDC007FA26C /* iPadReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPadReviewViewController.m; sourceTree = "<group>"; };
 		4849CBA016BC3C370051B0BB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		488E51D016651F2D006FEE11 /* GradSchoolCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GradSchoolCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		488E51D416651F2D006FEE11 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -51,14 +53,12 @@
 		488E51E616651F2D006FEE11 /* GSCDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSCDAppDelegate.m; sourceTree = "<group>"; };
 		488E51E916651F2D006FEE11 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		488E51EC16651F2D006FEE11 /* GradSchoolCD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GradSchoolCD.xcdatamodel; sourceTree = "<group>"; };
-		488E51FC16652257006FEE11 /* GSCDData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCDData.h; sourceTree = "<group>"; };
-		488E51FD16652257006FEE11 /* GSCDData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCDData.m; sourceTree = "<group>"; };
 		488E520316652475006FEE11 /* GSCDSelectionBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCDSelectionBox.h; sourceTree = "<group>"; };
 		488E520416652475006FEE11 /* GSCDSelectionBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCDSelectionBox.m; sourceTree = "<group>"; };
 		488E520616652545006FEE11 /* GSCDSelectLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCDSelectLabel.h; sourceTree = "<group>"; };
 		488E520716652546006FEE11 /* GSCDSelectLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCDSelectLabel.m; sourceTree = "<group>"; };
-		48A6F420166E47C000E36813 /* StudentInqury.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentInqury.h; sourceTree = "<group>"; };
-		48A6F421166E47C000E36813 /* StudentInqury.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentInqury.m; sourceTree = "<group>"; };
+		48A6F420166E47C000E36813 /* StudentInquiry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentInquiry.h; sourceTree = "<group>"; };
+		48A6F421166E47C000E36813 /* StudentInquiry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentInquiry.m; sourceTree = "<group>"; };
 		48DE57F316BB06800037334B /* graduate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graduate.png; sourceTree = "<group>"; };
 		8473D81B17034E9F00EC88A6 /* iPadAppIconRetina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPadAppIconRetina.png; sourceTree = "<group>"; };
 		8473D81D1703645F00EC88A6 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
@@ -87,12 +87,12 @@
 		3FAB95631719B64900966C3A /* iPad views */ = {
 			isa = PBXGroup;
 			children = (
+				3FC8BE131719BEDC007FA26C /* iPadFormViewController.h */,
+				3FC8BE141719BEDC007FA26C /* iPadFormViewController.m */,
+				3FC8BE151719BEDC007FA26C /* iPadReviewViewController.h */,
+				3FC8BE161719BEDC007FA26C /* iPadReviewViewController.m */,
 				488E520216652307006FEE11 /* Large Selction Box */,
 				488E51E816651F2D006FEE11 /* MainStoryboard.storyboard */,
-				3FAB955D1719B63A00966C3A /* iPadFormViewController.h */,
-				3FAB955E1719B63A00966C3A /* iPadFormViewController.m */,
-				3FAB955F1719B63A00966C3A /* iPadReviewViewController.h */,
-				3FAB95601719B63A00966C3A /* iPadReviewViewController.m */,
 			);
 			name = "iPad views";
 			sourceTree = "<group>";
@@ -108,8 +108,8 @@
 		3FAB95651719B69200966C3A /* helper classes */ = {
 			isa = PBXGroup;
 			children = (
-				3FAB95611719B64300966C3A /* URLManager.h */,
-				3FAB95621719B64300966C3A /* URLManager.m */,
+				3FC8BE101719BE4A007FA26C /* URLManager.h */,
+				3FC8BE111719BE4A007FA26C /* URLManager.m */,
 			);
 			name = "helper classes";
 			sourceTree = "<group>";
@@ -126,11 +126,9 @@
 		3FAB95671719B6CE00966C3A /* data */ = {
 			isa = PBXGroup;
 			children = (
-				488E51FC16652257006FEE11 /* GSCDData.h */,
-				488E51FD16652257006FEE11 /* GSCDData.m */,
 				488E51EB16651F2D006FEE11 /* GradSchoolCD.xcdatamodeld */,
-				48A6F420166E47C000E36813 /* StudentInqury.h */,
-				48A6F421166E47C000E36813 /* StudentInqury.m */,
+				48A6F420166E47C000E36813 /* StudentInquiry.h */,
+				48A6F421166E47C000E36813 /* StudentInquiry.m */,
 			);
 			name = data;
 			sourceTree = "<group>";
@@ -279,10 +277,12 @@
 				488E51E316651F2D006FEE11 /* main.m in Sources */,
 				488E51E716651F2D006FEE11 /* GSCDAppDelegate.m in Sources */,
 				488E51ED16651F2D006FEE11 /* GradSchoolCD.xcdatamodeld in Sources */,
-				488E51FE16652257006FEE11 /* GSCDData.m in Sources */,
 				488E520516652475006FEE11 /* GSCDSelectionBox.m in Sources */,
 				488E520816652546006FEE11 /* GSCDSelectLabel.m in Sources */,
-				48A6F422166E47C000E36813 /* StudentInqury.m in Sources */,
+				48A6F422166E47C000E36813 /* StudentInquiry.m in Sources */,
+				3FC8BE121719BE4A007FA26C /* URLManager.m in Sources */,
+				3FC8BE171719BEDC007FA26C /* iPadFormViewController.m in Sources */,
+				3FC8BE181719BEDC007FA26C /* iPadReviewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,15 +367,15 @@
 		488E51F716651F2E006FEE11 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Michael Botieri (E4W666RRTB)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Michael Botieri (E4W666RRTB)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Timothy Baker (X3QQN7Z5SP)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Timothy Baker (X3QQN7Z5SP)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GradSchoolCD/GradSchoolCD-Prefix.pch";
 				INFOPLIST_FILE = "GradSchoolCD/GradSchoolCD-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "555C93FB-806E-4371-B4AD-9DC3BF0C20C4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "555C93FB-806E-4371-B4AD-9DC3BF0C20C4";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -384,15 +384,15 @@
 		488E51F816651F2E006FEE11 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Michael Botieri (E4W666RRTB)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Michael Botieri (E4W666RRTB)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Timothy Baker (X3QQN7Z5SP)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Timothy Baker (X3QQN7Z5SP)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GradSchoolCD/GradSchoolCD-Prefix.pch";
 				INFOPLIST_FILE = "GradSchoolCD/GradSchoolCD-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "555C93FB-806E-4371-B4AD-9DC3BF0C20C4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "555C93FB-806E-4371-B4AD-9DC3BF0C20C4";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

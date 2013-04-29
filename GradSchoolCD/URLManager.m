@@ -11,7 +11,7 @@
 @implementation URLManager
 
 
-+(BOOL) sendToURL:(NSString *)url withData:(StudentInqury *)inquiry {
++(BOOL) sendToURL:(NSString *)url withData:(StudentInquiry *)inquiry {
 
     NSString *post = [self createPost:inquiry];
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
@@ -56,23 +56,26 @@
 }
 
 // creates a sting that can be sent as post data
-+(NSString *)createPost:(StudentInqury *)inquiry{
++(NSString *)createPost:(StudentInquiry *)inquiry{
 
+	NSMutableArray *programs = [inquiry programs];
+	NSString *programsAsString = [programs componentsJoinedByString:@","];
+	
     NSString *post = [NSString stringWithFormat:@"anticipatedTerm=%@&anticipatedYear=%@&aptNum=%@&city=%@&country=%@&dateOfBith=%@&email=%@&findOutAbout=%@&institution=%@&major=%@&name=%@&otherProgram=%@&phoneNum=%@&programsIntrestedIn=%@&state=%@&street=%@&zip=%@", 
                       [self urlEncodeValue:inquiry.anticipatedTerm],
                       [self urlEncodeValue:inquiry.anticipatedYear],
-                      [self urlEncodeValue:inquiry.aptNum],
+                      [self urlEncodeValue:inquiry.aptNumber],
                       [self urlEncodeValue:inquiry.city],
                       [self urlEncodeValue:inquiry.country],
                       [self urlEncodeValue:inquiry.dateOfBirth],
                       [self urlEncodeValue:inquiry.email],
-                      [self urlEncodeValue:inquiry.findOutAbout],
-                      [self urlEncodeValue:inquiry.insitution],
-                      [self urlEncodeValue:inquiry.major],
+                      [self urlEncodeValue:inquiry.howLearnedAboutUMaine],
+                      [self urlEncodeValue:inquiry.undergraduateInstitution],
+                      [self urlEncodeValue:inquiry.undergraduateMajor],
                       [self urlEncodeValue:inquiry.name],
                       [self urlEncodeValue:inquiry.otherProgram],
-                      [self urlEncodeValue:inquiry.phoneNum],
-                      [self urlEncodeValue:inquiry.programsIntrestedIn],
+                      [self urlEncodeValue:inquiry.phoneNumber],
+                      [self urlEncodeValue:programsAsString],
                       [self urlEncodeValue:inquiry.state],
                       [self urlEncodeValue:inquiry.street],
                       [self urlEncodeValue:inquiry.zip]];
