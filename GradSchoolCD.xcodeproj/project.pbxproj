@@ -29,7 +29,9 @@
 		8473D8201703646800EC88A6 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8473D81F1703646800EC88A6 /* Default-Portrait@2x~ipad.png */; };
 		84A5D9C0170348950053E98B /* iPadAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A5D9BF170348950053E98B /* iPadAppIcon.png */; };
 		84A5D9C2170348D00053E98B /* iPadAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A5D9C1170348D00053E98B /* iPadAppIcon.png */; };
-		A9491DE417187FA50062BF24 /* iPhoneStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9491DE217187FA50062BF24 /* iPhoneStoryboard.storyboard */; };
+		A9BD1A78172F09B400B78206 /* iPhoneFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BD1A77172F09B400B78206 /* iPhoneFormViewController.m */; };
+		A9BD1A7A172F09E300B78206 /* iPhoneStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9BD1A79172F09E300B78206 /* iPhoneStoryboard.storyboard */; };
+		A9BD1A8C172F219900B78206 /* iPhoneProgramsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BD1A8B172F219900B78206 /* iPhoneProgramsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,7 +67,11 @@
 		8473D81F1703646800EC88A6 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
 		84A5D9BF170348950053E98B /* iPadAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPadAppIcon.png; sourceTree = "<group>"; };
 		84A5D9C1170348D00053E98B /* iPadAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPadAppIcon.png; sourceTree = "<group>"; };
-		A9491DE317187FA50062BF24 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = GradSchoolCD/en.lproj/iPhoneStoryboard.storyboard; sourceTree = "<group>"; };
+		A9BD1A76172F09B400B78206 /* iPhoneFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneFormViewController.h; sourceTree = "<group>"; };
+		A9BD1A77172F09B400B78206 /* iPhoneFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPhoneFormViewController.m; sourceTree = "<group>"; };
+		A9BD1A79172F09E300B78206 /* iPhoneStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhoneStoryboard.storyboard; sourceTree = "<group>"; };
+		A9BD1A8A172F219900B78206 /* iPhoneProgramsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneProgramsTableViewController.h; sourceTree = "<group>"; };
+		A9BD1A8B172F219900B78206 /* iPhoneProgramsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPhoneProgramsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +106,10 @@
 		3FAB95641719B66D00966C3A /* iPhone views */ = {
 			isa = PBXGroup;
 			children = (
-				A9491DE217187FA50062BF24 /* iPhoneStoryboard.storyboard */,
+				A9BD1A76172F09B400B78206 /* iPhoneFormViewController.h */,
+				A9BD1A77172F09B400B78206 /* iPhoneFormViewController.m */,
+				A9BD1A79172F09E300B78206 /* iPhoneStoryboard.storyboard */,
+				A9BD1A8D172F219D00B78206 /* list of programs */,
 			);
 			name = "iPhone views";
 			sourceTree = "<group>";
@@ -203,6 +212,15 @@
 			name = "Large Selction Box";
 			sourceTree = "<group>";
 		};
+		A9BD1A8D172F219D00B78206 /* list of programs */ = {
+			isa = PBXGroup;
+			children = (
+				A9BD1A8A172F219900B78206 /* iPhoneProgramsTableViewController.h */,
+				A9BD1A8B172F219900B78206 /* iPhoneProgramsTableViewController.m */,
+			);
+			name = "list of programs";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -263,7 +281,7 @@
 				8473D81C17034E9F00EC88A6 /* iPadAppIconRetina.png in Resources */,
 				8473D81E1703645F00EC88A6 /* Default-Portrait~ipad.png in Resources */,
 				8473D8201703646800EC88A6 /* Default-Portrait@2x~ipad.png in Resources */,
-				A9491DE417187FA50062BF24 /* iPhoneStoryboard.storyboard in Resources */,
+				A9BD1A7A172F09E300B78206 /* iPhoneStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +301,8 @@
 				3FC8BE121719BE4A007FA26C /* URLManager.m in Sources */,
 				3FC8BE171719BEDC007FA26C /* iPadFormViewController.m in Sources */,
 				3FC8BE181719BEDC007FA26C /* iPadReviewViewController.m in Sources */,
+				A9BD1A78172F09B400B78206 /* iPhoneFormViewController.m in Sources */,
+				A9BD1A8C172F219900B78206 /* iPhoneProgramsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,15 +323,6 @@
 				488E51E916651F2D006FEE11 /* en */,
 			);
 			name = MainStoryboard.storyboard;
-			sourceTree = "<group>";
-		};
-		A9491DE217187FA50062BF24 /* iPhoneStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A9491DE317187FA50062BF24 /* en */,
-			);
-			name = iPhoneStoryboard.storyboard;
-			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -367,15 +378,15 @@
 		488E51F716651F2E006FEE11 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Timothy Baker (X3QQN7Z5SP)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Timothy Baker (X3QQN7Z5SP)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Michael Botieri (E4W666RRTB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Michael Botieri (E4W666RRTB)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GradSchoolCD/GradSchoolCD-Prefix.pch";
 				INFOPLIST_FILE = "GradSchoolCD/GradSchoolCD-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "555C93FB-806E-4371-B4AD-9DC3BF0C20C4";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "555C93FB-806E-4371-B4AD-9DC3BF0C20C4";
+				PROVISIONING_PROFILE = "E3BCAE36-4C83-46DE-8B51-222045B5C272";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E3BCAE36-4C83-46DE-8B51-222045B5C272";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -384,15 +395,15 @@
 		488E51F816651F2E006FEE11 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Timothy Baker (X3QQN7Z5SP)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Timothy Baker (X3QQN7Z5SP)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Michael Botieri (E4W666RRTB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Michael Botieri (E4W666RRTB)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GradSchoolCD/GradSchoolCD-Prefix.pch";
 				INFOPLIST_FILE = "GradSchoolCD/GradSchoolCD-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "555C93FB-806E-4371-B4AD-9DC3BF0C20C4";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "555C93FB-806E-4371-B4AD-9DC3BF0C20C4";
+				PROVISIONING_PROFILE = "E3BCAE36-4C83-46DE-8B51-222045B5C272";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E3BCAE36-4C83-46DE-8B51-222045B5C272";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

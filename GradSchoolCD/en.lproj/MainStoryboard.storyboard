@@ -526,7 +526,7 @@
                                         </connections>
                                     </segmentedControl>
                                 </subviews>
-                                <color key="backgroundColor" red="0.94509803921568625" green="0.92549019607843142" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="5jK-KQ-VN4" id="0HW-45-ykw"/>
                                 </connections>
@@ -799,24 +799,6 @@
                 <relationship kind="action" name="semesterSelect:" candidateClass="UISegmentedControl"/>
                 <relationship kind="action" name="unwindFromDisplayToEntryScreenSubmit:" candidateClass="UIStoryboardSegue"/>
                 <relationship kind="action" name="updateAnticipatedYear:" candidateClass="UIStepper"/>
-                <relationship kind="outlet" name="AptNum" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="BirthDate" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="City" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="Country" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="Email" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="Intstitution" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="Major" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="Name" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="Other" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="PhoneNum" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="State" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="Street" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="Zip" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="boxOne" candidateClass="GSCDSelectionBox"/>
-                <relationship kind="outlet" name="infoPage" candidateClass="iPadReviewViewController"/>
-                <relationship kind="outlet" name="scroller" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="year" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="iPadReviewViewController" superclassName="UIViewController">
