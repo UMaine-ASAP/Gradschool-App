@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GSCDAppDelegate.h"
+#import "StudentInquiry.h"
 
 @interface iPhoneFormViewController : UIViewController
 
 -(IBAction)unwindToIphoneMainScreen:(UIStoryboardSegue *)segue;
+
+/**
+ * Sets all fields back to their default state
+ */
+-(void) reset;
 
 @end

@@ -45,6 +45,17 @@
 	return [self submitInquiryToServer:self.currentInquiry];
 }
 
+/*
+//Checks if URL has been changed from Settings page
+-(id)urlToUse{
+    if (NSBundle * == [NSDictionary dictionaryWithObject:@"YES"
+                                                                forKey:@"useDefaultURL"])
+        return [NSString stringWithFormat:@"http://kenai.asap.um.maine.edu/gradapp/save.php"];
+    else
+        return[NSString * == [NSDictionary dictionaryWithObject:@"%d"
+                                                         forKey:@"altUrl"]];
+}
+*/
 
 /**
  * Send a specific inquiry to the server (Internal Function)
