@@ -70,7 +70,7 @@
                                         <color key="textColor" cyan="0.87" magenta="0.5" yellow="0.080000000000000002" black="0.089999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="H10-2P-Kty">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="H10-2P-Kty">
                                         <rect key="frame" x="72" y="182" width="305" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -86,7 +86,7 @@
                                         <color key="textColor" cyan="0.87" magenta="0.5" yellow="0.080000000000000002" black="0.089999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="2fl-uc-uYW">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="2fl-uc-uYW">
                                         <rect key="frame" x="411" y="182" width="305" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -102,7 +102,7 @@
                                         <color key="textColor" cyan="0.87" magenta="0.5" yellow="0.080000000000000002" black="0.089999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="(xxx)xxx-xxxx" borderStyle="roundedRect" minimumFontSize="17" id="v4K-Uc-KUq">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="(xxx)xxx-xxxx" borderStyle="roundedRect" minimumFontSize="17" id="v4K-Uc-KUq">
                                         <rect key="frame" x="72" y="263" width="305" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -118,7 +118,7 @@
                                         <color key="textColor" cyan="0.87" magenta="0.5" yellow="0.080000000000000002" black="0.089999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="OGt-Rj-cRj">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="OGt-Rj-cRj">
                                         <rect key="frame" x="411" y="263" width="305" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -181,7 +181,7 @@
                                         <color key="textColor" cyan="0.87" magenta="0.5" yellow="0.080000000000000002" black="0.089999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="rhW-y3-dLJ">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="rhW-y3-dLJ">
                                         <rect key="frame" x="72" y="446" width="305" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -197,7 +197,7 @@
                                         <color key="textColor" cyan="0.87" magenta="0.5" yellow="0.080000000000000002" black="0.089999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="7CK-Qs-cbX">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="7CK-Qs-cbX">
                                         <rect key="frame" x="72" y="532" width="305" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -213,7 +213,7 @@
                                         <color key="textColor" cyan="0.87" magenta="0.5" yellow="0.080000000000000002" black="0.089999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="kId-gb-PDb">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="kId-gb-PDb">
                                         <rect key="frame" x="72" y="619" width="305" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -229,7 +229,7 @@
                                         <color key="textColor" cyan="0.87" magenta="0.5" yellow="0.080000000000000002" black="0.089999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="VQJ-mO-rcj">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="VQJ-mO-rcj">
                                         <rect key="frame" x="411" y="532" width="305" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -245,7 +245,7 @@
                                         <color key="textColor" cyan="0.87" magenta="0.5" yellow="0.080000000000000002" black="0.089999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="A9l-B9-Tau">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="A9l-B9-Tau">
                                         <rect key="frame" x="411" y="446" width="105" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -261,7 +261,7 @@
                                         <color key="textColor" cyan="0.87" magenta="0.5" yellow="0.080000000000000002" black="0.089999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="7Cf-Sg-sDy">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="7Cf-Sg-sDy">
                                         <rect key="frame" x="524" y="446" width="192" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -317,7 +317,7 @@
                                         <color key="textColor" cyan="0.87" magenta="0.5" yellow="0.080000000000000002" black="0.089999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="wqw-fR-3iQ">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="wqw-fR-3iQ">
                                         <rect key="frame" x="72" y="798" width="305" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -333,7 +333,7 @@
                                         <color key="textColor" cyan="0.87" magenta="0.5" yellow="0.080000000000000002" black="0.089999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="xoy-hN-aHu">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="xoy-hN-aHu">
                                         <rect key="frame" x="411" y="798" width="305" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -387,7 +387,7 @@
                                         <color key="textColor" cyan="0.87" magenta="0.5" yellow="0.080000000000000002" black="0.089999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="RbL-Ft-fzn">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="RbL-Ft-fzn">
                                         <rect key="frame" x="71" y="1598" width="305" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -424,7 +424,7 @@
                                         <color key="textColor" cyan="0.87" magenta="0.5" yellow="0.080000000000000002" black="0.089999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stepper opaque="NO" clipsSubviews="YES" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" id="XhX-nB-8iP">
+                                    <stepper opaque="NO" clipsSubviews="YES" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" id="XhX-nB-8iP">
                                         <rect key="frame" x="616" y="1005" width="94" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                                         <connections>
@@ -438,7 +438,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Ikb-n7-yYq" customClass="GSCDSelectionBox">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" tag="15" contentMode="scaleToFill" id="Ikb-n7-yYq" customClass="GSCDSelectionBox">
                                         <rect key="frame" x="77" y="1092" width="636" height="458"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -447,7 +447,7 @@
                                             <outletCollection property="gestureRecognizers" destination="e2C-0b-Fmk" appends="YES" id="qJI-y7-jXt"/>
                                         </connections>
                                     </scrollView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="16" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="rEd-Ag-wHb">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="17" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="rEd-Ag-wHb">
                                         <rect key="frame" x="74" y="1669" width="636" height="157"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -513,7 +513,7 @@
                                         <rect key="frame" x="505" y="-4" width="245" height="99"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="bfZ-jb-CVj">
+                                    <segmentedControl opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="bfZ-jb-CVj">
                                         <rect key="frame" x="77" y="999" width="288" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <segments>
@@ -552,12 +552,36 @@
                         <outlet property="Zip" destination="7Cf-Sg-sDy" id="InU-38-88v"/>
                         <outlet property="anticipatedTerm" destination="bfZ-jb-CVj" id="oCi-4i-tKm"/>
                         <outlet property="boxOne" destination="Ikb-n7-yYq" id="N19-an-2jm"/>
+                        <outlet property="keyboardToolbar" destination="TO1-3Z-euh" id="5B8-yV-6Tc"/>
                         <outlet property="scroller" destination="I2b-Cc-JgC" id="gSu-SA-FIQ"/>
                         <outlet property="textView" destination="rEd-Ag-wHb" id="YOh-pL-2xc"/>
+                        <outlet property="toolbarActionButton" destination="bYm-vY-Mt9" id="lJG-KX-x3c"/>
                         <outlet property="year" destination="4ms-4i-yUp" id="MCQ-jP-o6h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ywE-IA-FTv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="TO1-3Z-euh">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem title="Prev" id="mAf-Pw-68w">
+                            <connections>
+                                <action selector="prevField:" destination="5jK-KQ-VN4" id="OGu-FI-mwg"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="mSz-sA-aiz"/>
+                        <barButtonItem title="Next" id="IlL-tv-3FO">
+                            <connections>
+                                <action selector="nextField:" destination="5jK-KQ-VN4" id="LDc-Jf-vla"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Close" id="bYm-vY-Mt9">
+                            <connections>
+                                <action selector="closeKeyboard:" destination="5jK-KQ-VN4" id="yoz-dM-s3f"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
                 <tapGestureRecognizer id="e2C-0b-Fmk">
                     <connections>
                         <action selector="viewWasTouched:" destination="Ikb-n7-yYq" id="ClA-aP-na6"/>
@@ -795,10 +819,32 @@
         <class className="iPadFormViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/iPadFormViewController.h"/>
             <relationships>
+                <relationship kind="action" name="closeKeyboard:"/>
                 <relationship kind="action" name="gotoReviewScreen:"/>
+                <relationship kind="action" name="nextField:"/>
+                <relationship kind="action" name="prevField:"/>
                 <relationship kind="action" name="semesterSelect:" candidateClass="UISegmentedControl"/>
                 <relationship kind="action" name="unwindFromDisplayToEntryScreenSubmit:" candidateClass="UIStoryboardSegue"/>
                 <relationship kind="action" name="updateAnticipatedYear:" candidateClass="UIStepper"/>
+                <relationship kind="outlet" name="AptNum" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="BirthDate" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="City" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Country" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Email" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Intstitution" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Major" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Name" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Other" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="PhoneNum" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="State" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Street" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Zip" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="boxOne" candidateClass="GSCDSelectionBox"/>
+                <relationship kind="outlet" name="infoPage" candidateClass="iPadReviewViewController"/>
+                <relationship kind="outlet" name="keyboardToolbar" candidateClass="UIToolbar"/>
+                <relationship kind="outlet" name="scroller" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="year" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="iPadReviewViewController" superclassName="UIViewController">

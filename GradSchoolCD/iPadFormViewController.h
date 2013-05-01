@@ -21,6 +21,11 @@
 - (IBAction)updateAnticipatedYear:(UIStepper *)sender;
 - (IBAction)semesterSelect:(UISegmentedControl *)sender;
 
+- (IBAction)prevField:(id)sender;
+- (IBAction)nextField:(id)sender;
+- (IBAction)closeKeyboard:(id)sender;
+
+
 /**
  * Sets all fields back to their default state
  */
