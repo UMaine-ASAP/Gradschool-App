@@ -29,6 +29,10 @@ enum {
     __weak IBOutlet UISegmentedControl *anticipatedTerm;
     
     
+    IBOutlet UIToolbar *keyboardToolbar;
+    NSArray *allTextFields;
+    __weak IBOutlet UIBarButtonItem *toolbarActionButton;
+    
     // all the textfeilds
     IBOutlet UITextField *Name;
     IBOutlet UITextField *BirthDate;
@@ -86,6 +90,8 @@ enum {
     //reset Data
     [self resetDataAndDisplay];
 	
+    // Set textfield order
+    allTextFields = [[NSArray alloc] initWithObjects:Name, BirthDate, PhoneNum, Email, Street, AptNum, Zip, City, State, Country, Intstitution, Major, anticipatedTerm, year, Other, textView, nil];
 }
 
 
@@ -117,8 +123,25 @@ enum {
 {
     activeField = textField;
    
+    // Load inputaccessory view
+    [textField setInputAccessoryView:keyboardToolbar];
+    for (int i=0; i<[allTextFields count]; i++) {
+        if ([allTextFields objectAtIndex:i]==textField) {
+            if (i==[allTextFields count]-1) {
+                toolbarActionButton.title = @"Done";
+                [toolbarActionButton setStyle:UIBarButtonItemStyleDone];
+            } else {
+                [toolbarActionButton setTitle:@"Close"];
+                [toolbarActionButton setStyle:UIBarButtonItemStyleBordered];                
+            }
+//            [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+        }
+    }
     
+//    [scroller setContentOffset:CGPointMake(0,textField.center.y-60) animated:YES];
+    [textField becomeFirstResponder];
 }
+
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
@@ -161,6 +184,18 @@ enum {
 - (void)textViewDidBeginEditing:(UITextView *)textView
 {
     activeView = textView;
+
+    // Load inputaccessoryview
+    [textView setInputAccessoryView:keyboardToolbar];
+    for (int i=0; i<[allTextFields count]; i++) {
+        if ([allTextFields objectAtIndex:i]==textView) {
+            if (i==[allTextFields count]-1) {
+                toolbarActionButton.title = @"Done";
+                [toolbarActionButton setStyle:UIBarButtonItemStyleDone];
+            }
+            //            [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+        }
+    }
 }
 
 - (void)textViewDidEndEditing:(UITextView *)textView
@@ -209,19 +244,14 @@ enum {
 }
 
 
-/** why is this here? */
--(void)scrollViewWillBeginDraggin:(UIScrollView *)scrollView{
+/** Hide keyboard when dragging */
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     [scrollView resignFirstResponder];
+	[activeField resignFirstResponder];
+	[textView resignFirstResponder];
     [scroller resignFirstResponder];
 }
 
-/** why is this here? */
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-	[activeField resignFirstResponder];
-	[textView resignFirstResponder];
-	[scroller resignFirstResponder];	
-}
 
 // gets called when the anticapated year value changes, tell the data object trhough the app delagate
 - (IBAction)updateAnticipatedYear:(UIStepper *)sender{
@@ -238,6 +268,72 @@ enum {
 // gets called when then one of the anticapted semester buttons is pressed, changes that value
 - (IBAction)semesterSelect:(UISegmentedControl *)sender{
 	_currentInquiry.anticipatedTerm = [sender titleForSegmentAtIndex:sender.selectedSegmentIndex];
+}
+
+// Source: http://idebuggerman.blogspot.com/2010/08/uitoolbar-for-keyboard-with.html
+- (IBAction)prevField:(id)sender {
+
+    
+    for (int i=0; i<[allTextFields count]; i++) {
+        if ([[allTextFields objectAtIndex:i] isEditing] && i!=0) {
+            [[allTextFields objectAtIndex:i-1] becomeFirstResponder];
+            [toolbarActionButton setTitle:@"Close"];
+//            [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:i-1 inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+            [toolbarActionButton setStyle:UIBarButtonItemStyleBordered];
+            
+            break;
+        }
+    }
+}
+
+- (IBAction)nextField:(id)sender {
+    for (int i=0; i<[allTextFields count]; i++) {
+        
+        //NSLog(@"type: %i", ((UIView *) [allTextFields objectAtIndex:i]).tag);
+        
+        // Get current textview
+        if ([[allTextFields objectAtIndex:i] isEditing] && i!=[allTextFields count]-1) {
+
+            // Get and goto next view
+            UIView * nextView = [allTextFields objectAtIndex:i+1];
+            [[allTextFields objectAtIndex:i+1] becomeFirstResponder];
+            
+            if(nextView.tag >= 13 && nextView.tag <=15) {
+                [[allTextFields objectAtIndex:i] resignFirstResponder];
+                [scroller setContentOffset:CGPointMake(0,nextView.center.y-60) animated:YES];
+            }
+            
+            // At last
+            if (i+1==[allTextFields count]-1) {
+                [toolbarActionButton setTitle:@"Done"];
+                [toolbarActionButton setStyle:UIBarButtonItemStyleDone];
+            }else {
+                [toolbarActionButton setTitle:@"Close"];
+                [toolbarActionButton setStyle:UIBarButtonItemStyleBordered];
+            }
+            
+//            [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:i+1 inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+            
+            
+            break;
+        }
+    }
+}
+
+- (IBAction)closeKeyboard:(id)sender {
+    if( [toolbarActionButton.title isEqualToString:@"Done"] )
+    {
+        //[self gotoReviewScreen:self];
+    }
+
+    NSLog(@"title: %@", toolbarActionButton.title);
+    
+    for(UITextField *t in allTextFields){
+        if ([t isEditing]) {
+            [t resignFirstResponder];
+            break;
+        }
+    }
 }
 
 
