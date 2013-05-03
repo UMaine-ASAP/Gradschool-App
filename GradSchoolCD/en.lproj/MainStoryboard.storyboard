@@ -806,6 +806,8 @@
     <resources>
         <image name="graduate.png" width="245" height="99"/>
     </resources>
+<<<<<<< HEAD
+=======
     <classes>
         <class className="GSCDSelectionBox" superclassName="UIScrollView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GSCDSelectionBox.h"/>
@@ -851,6 +853,7 @@
             </relationships>
         </class>
     </classes>
+>>>>>>> 6c2a61662bee9ba154261eb229b065399673d636
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
