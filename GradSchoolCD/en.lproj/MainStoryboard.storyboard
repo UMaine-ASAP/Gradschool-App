@@ -806,8 +806,6 @@
     <resources>
         <image name="graduate.png" width="245" height="99"/>
     </resources>
-<<<<<<< HEAD
-=======
     <classes>
         <class className="GSCDSelectionBox" superclassName="UIScrollView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GSCDSelectionBox.h"/>
@@ -828,6 +826,25 @@
                 <relationship kind="action" name="semesterSelect:" candidateClass="UISegmentedControl"/>
                 <relationship kind="action" name="unwindFromDisplayToEntryScreenSubmit:" candidateClass="UIStoryboardSegue"/>
                 <relationship kind="action" name="updateAnticipatedYear:" candidateClass="UIStepper"/>
+                <relationship kind="outlet" name="AptNum" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="BirthDate" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="City" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Country" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Email" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Intstitution" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Major" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Name" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Other" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="PhoneNum" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="State" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Street" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Zip" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="boxOne" candidateClass="GSCDSelectionBox"/>
+                <relationship kind="outlet" name="infoPage" candidateClass="iPadReviewViewController"/>
+                <relationship kind="outlet" name="keyboardToolbar" candidateClass="UIToolbar"/>
+                <relationship kind="outlet" name="scroller" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="year" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="iPadReviewViewController" superclassName="UIViewController">
@@ -853,7 +870,6 @@
             </relationships>
         </class>
     </classes>
->>>>>>> 6c2a61662bee9ba154261eb229b065399673d636
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
