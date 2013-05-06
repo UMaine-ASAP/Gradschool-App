@@ -48,12 +48,12 @@
 
 //Checks if URL has been changed from Settings page
 -(BOOL)urlToUse{
-    if (NSBundle * == [NSDictionary dictionaryWithObject:@"YES"
-                                                                forKey:@"useDefaultURL"])
-        return [NSString stringWithFormat:@"http://kenai.asap.um.maine.edu/gradapp/save.php"];
-    else
-        return[NSString * == [NSDictionary dictionaryWithObject:@"%d"
-                                                         forKey:@"altUrl"]];
+//    if (NSBundle * == [NSDictionary dictionaryWithObject:@"YES"
+ //                                                               forKey:@"useDefaultURL"])
+//        return [NSString stringWithFormat:@"http://kenai.asap.um.maine.edu/gradapp/save.php"];
+//    else
+//        return[NSString * == [NSDictionary dictionaryWithObject:@"%d"
+//                                                         forKey:@"altUrl"]];
 }
 
 
