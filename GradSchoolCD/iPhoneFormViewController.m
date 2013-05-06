@@ -50,6 +50,54 @@
 
     GSCDAppDelegate *appDelegate;
 }
+/*
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    activeField = nil;
+	
+	// Save changes
+	// @TODO: maybe use tag or map tag to keyName?
+	//[_currentInquiry setValue:textField.text forKey:textField];
+    if(textField == Name) {
+        _currentInquiry.name = textField.text;
+    } else if (textField == BirthDate) {
+        _currentInquiry.dateOfBirth = textField.text;
+    } else if (textField == PhoneNum) {
+        _currentInquiry.phoneNumber = textField.text;
+    } else if (textField == Email) {
+        _currentInquiry.email = textField.text;
+    } else if (textField == Street) {
+        _currentInquiry.street = textField.text;
+    } else if (textField == AptNum) {
+        _currentInquiry.aptNumber = textField.text;
+    } else if (textField == Zip) {
+        _currentInquiry.zip = textField.text;
+    } else if (textField == City) {
+        _currentInquiry.city = textField.text;
+    } else if (textField == State) {
+        _currentInquiry.state = textField.text;
+    } else if (textField == Country) {
+        _currentInquiry.country = textField.text;
+    } else if (textField == Intstitution) {
+        _currentInquiry.undergraduateInstitution = textField.text;
+    } else if (textField == Major) {
+        _currentInquiry.undergraduateMajor = textField.text;
+    } else if (textField == Other) {
+        _currentInquiry.otherProgram = textField.text;
+    }
+    
+}
+*/
+- (IBAction)updateAnticipatedYear:(UIStepper *)sender{
+    CFGregorianDate currentDate = CFAbsoluteTimeGetGregorianDate(CFAbsoluteTimeGetCurrent(), CFTimeZoneCopySystem());
+    int intYear = currentDate.year;
+    int value = [sender value];
+    value = intYear+value;
+    NSString *valueText = [NSString stringWithFormat:@"%d",value];
+    [year setText:valueText];
+	
+	//self.currentInquiry.anticipatedYear = [year text];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

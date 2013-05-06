@@ -45,7 +45,7 @@
 	return [self submitInquiryToServer:self.currentInquiry];
 }
 
-
+/*
 //Checks if URL has been changed from Settings page
 -(BOOL)urlToUse{
     if (NSBundle * == [NSDictionary dictionaryWithObject:@"YES"
@@ -55,7 +55,7 @@
         return[NSString * == [NSDictionary dictionaryWithObject:@"%d"
                                                          forKey:@"altUrl"]];
 }
-
+*/
 
 /**
  * Send a specific inquiry to the server (Internal Function)

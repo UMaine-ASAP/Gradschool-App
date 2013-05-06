@@ -31,9 +31,15 @@
 		84A5D9C0170348950053E98B /* iPadAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A5D9BF170348950053E98B /* iPadAppIcon.png */; };
 		84A5D9C2170348D00053E98B /* iPadAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A5D9C1170348D00053E98B /* iPadAppIcon.png */; };
 		A91A0DE9173009C800D6AF4F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A91A0DE8173009C800D6AF4F /* Settings.bundle */; };
+		A9734C781734540E00803E2E /* iPhoneGradPlansViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9734C771734540E00803E2E /* iPhoneGradPlansViewController.m */; };
 		A9BD1A78172F09B400B78206 /* iPhoneFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BD1A77172F09B400B78206 /* iPhoneFormViewController.m */; };
 		A9BD1A7A172F09E300B78206 /* iPhoneStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9BD1A79172F09E300B78206 /* iPhoneStoryboard.storyboard */; };
 		A9BD1A8C172F219900B78206 /* iPhoneProgramsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BD1A8B172F219900B78206 /* iPhoneProgramsTableViewController.m */; };
+		A9D9B89917382A0000F42C40 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D9B89717382A0000F42C40 /* AddressBook.framework */; };
+		A9D9B89A17382A0000F42C40 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D9B89817382A0000F42C40 /* AddressBookUI.framework */; };
+		A9D9B89E17382C5900F42C40 /* iPhoneImportContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D9B89C17382C5900F42C40 /* iPhoneImportContactViewController.m */; };
+		A9D9B89F17382C5900F42C40 /* iPhoneImportContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9D9B89D17382C5900F42C40 /* iPhoneImportContactViewController.xib */; };
+		A9D9B8A317382CAE00F42C40 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D9B8A217382CAE00F42C40 /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,11 +77,20 @@
 		84A5D9BF170348950053E98B /* iPadAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPadAppIcon.png; sourceTree = "<group>"; };
 		84A5D9C1170348D00053E98B /* iPadAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPadAppIcon.png; sourceTree = "<group>"; };
 		A91A0DE8173009C800D6AF4F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = GradSchoolCD/Settings.bundle; sourceTree = "<group>"; };
+		A9734C761734540E00803E2E /* iPhoneGradPlansViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneGradPlansViewController.h; sourceTree = "<group>"; };
+		A9734C771734540E00803E2E /* iPhoneGradPlansViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPhoneGradPlansViewController.m; sourceTree = "<group>"; };
 		A9BD1A76172F09B400B78206 /* iPhoneFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneFormViewController.h; sourceTree = "<group>"; };
 		A9BD1A77172F09B400B78206 /* iPhoneFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPhoneFormViewController.m; sourceTree = "<group>"; };
 		A9BD1A79172F09E300B78206 /* iPhoneStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhoneStoryboard.storyboard; sourceTree = "<group>"; };
 		A9BD1A8A172F219900B78206 /* iPhoneProgramsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneProgramsTableViewController.h; sourceTree = "<group>"; };
 		A9BD1A8B172F219900B78206 /* iPhoneProgramsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPhoneProgramsTableViewController.m; sourceTree = "<group>"; };
+		A9D9B89717382A0000F42C40 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		A9D9B89817382A0000F42C40 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		A9D9B89B17382C5900F42C40 /* iPhoneImportContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneImportContactViewController.h; sourceTree = "<group>"; };
+		A9D9B89C17382C5900F42C40 /* iPhoneImportContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPhoneImportContactViewController.m; sourceTree = "<group>"; };
+		A9D9B89D17382C5900F42C40 /* iPhoneImportContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iPhoneImportContactViewController.xib; sourceTree = "<group>"; };
+		A9D9B8A117382CAE00F42C40 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		A9D9B8A217382CAE00F42C40 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9D9B89917382A0000F42C40 /* AddressBook.framework in Frameworks */,
+				A9D9B89A17382A0000F42C40 /* AddressBookUI.framework in Frameworks */,
 				4849CBA116BC3C370051B0BB /* QuartzCore.framework in Frameworks */,
 				488E51D516651F2D006FEE11 /* UIKit.framework in Frameworks */,
 				488E51D716651F2D006FEE11 /* Foundation.framework in Frameworks */,
@@ -110,9 +127,11 @@
 		3FAB95641719B66D00966C3A /* iPhone views */ = {
 			isa = PBXGroup;
 			children = (
+				A9D9B8A017382C6400F42C40 /* import contact */,
 				A9BD1A76172F09B400B78206 /* iPhoneFormViewController.h */,
 				A9BD1A77172F09B400B78206 /* iPhoneFormViewController.m */,
 				A9BD1A79172F09E300B78206 /* iPhoneStoryboard.storyboard */,
+				A9734C791734541300803E2E /* GradSchoolPlans */,
 				A9BD1A8D172F219D00B78206 /* list of programs */,
 			);
 			name = "iPhone views";
@@ -149,6 +168,8 @@
 		488E51C516651F2D006FEE11 = {
 			isa = PBXGroup;
 			children = (
+				A9D9B89717382A0000F42C40 /* AddressBook.framework */,
+				A9D9B89817382A0000F42C40 /* AddressBookUI.framework */,
 				A91A0DE8173009C800D6AF4F /* Settings.bundle */,
 				8473D81F1703646800EC88A6 /* Default-Portrait@2x~ipad.png */,
 				8473D81D1703645F00EC88A6 /* Default-Portrait~ipad.png */,
@@ -218,6 +239,15 @@
 			name = "Large Selction Box";
 			sourceTree = "<group>";
 		};
+		A9734C791734541300803E2E /* GradSchoolPlans */ = {
+			isa = PBXGroup;
+			children = (
+				A9734C761734540E00803E2E /* iPhoneGradPlansViewController.h */,
+				A9734C771734540E00803E2E /* iPhoneGradPlansViewController.m */,
+			);
+			name = GradSchoolPlans;
+			sourceTree = "<group>";
+		};
 		A9BD1A8D172F219D00B78206 /* list of programs */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +255,18 @@
 				A9BD1A8B172F219900B78206 /* iPhoneProgramsTableViewController.m */,
 			);
 			name = "list of programs";
+			sourceTree = "<group>";
+		};
+		A9D9B8A017382C6400F42C40 /* import contact */ = {
+			isa = PBXGroup;
+			children = (
+				A9D9B89B17382C5900F42C40 /* iPhoneImportContactViewController.h */,
+				A9D9B89C17382C5900F42C40 /* iPhoneImportContactViewController.m */,
+				A9D9B89D17382C5900F42C40 /* iPhoneImportContactViewController.xib */,
+				A9D9B8A117382CAE00F42C40 /* Person.h */,
+				A9D9B8A217382CAE00F42C40 /* Person.m */,
+			);
+			name = "import contact";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +332,7 @@
 				A9BD1A7A172F09E300B78206 /* iPhoneStoryboard.storyboard in Resources */,
 				A91A0DE9173009C800D6AF4F /* Settings.bundle in Resources */,
 				58D716A81730861B00E32A27 /* keyboardToolbar.xib in Resources */,
+				A9D9B89F17382C5900F42C40 /* iPhoneImportContactViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +354,9 @@
 				3FC8BE181719BEDC007FA26C /* iPadReviewViewController.m in Sources */,
 				A9BD1A78172F09B400B78206 /* iPhoneFormViewController.m in Sources */,
 				A9BD1A8C172F219900B78206 /* iPhoneProgramsTableViewController.m in Sources */,
+				A9734C781734540E00803E2E /* iPhoneGradPlansViewController.m in Sources */,
+				A9D9B89E17382C5900F42C40 /* iPhoneImportContactViewController.m in Sources */,
+				A9D9B8A317382CAE00F42C40 /* Person.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
