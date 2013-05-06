@@ -32,6 +32,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UIAlertView *addPrograms = [[UIAlertView alloc] initWithTitle:@"Program Selection"
+                                                         message:@"Please select the programs you're interested in. You may select as many as you like."
+                                                        delegate:nil
+                                               cancelButtonTitle:@"Okay"
+                                                otherButtonTitles: nil];
+    [addPrograms show];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
