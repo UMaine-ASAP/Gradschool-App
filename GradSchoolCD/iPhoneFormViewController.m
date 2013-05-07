@@ -8,6 +8,9 @@
 
 #import "iPhoneFormViewController.h"
 
+#define kAnticipatedYearPickerTag 1
+#define kAnticipatedTermPickerTag 2
+
 @interface iPhoneFormViewController ()
 
 @end
@@ -49,6 +52,41 @@
     CGPoint scrollPoint;
 
     GSCDAppDelegate *appDelegate;
+    NSMutableArray *availableYears;
+    NSMutableArray *availableTerms;
+
+}
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)thePickerView {
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)thePickerView numberOfRowsInComponent:(NSInteger)component {
+    switch (thePickerView.tag) {
+        case kAnticipatedYearPickerTag:
+            return [availableYears count];
+            break;
+        case kAnticipatedTermPickerTag:
+            return [availableTerms count];
+            break;
+        default:
+            return 0;
+            break;
+    }
+}
+
+- (NSString *)pickerView:(UIPickerView *)thePickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    switch (thePickerView.tag) {
+        case kAnticipatedYearPickerTag:
+            return [availableYears objectAtIndex:row];
+            break;
+        case kAnticipatedTermPickerTag:
+            return [availableTerms objectAtIndex:row];
+            break;
+        default:
+            return @"";
+            break;
+    }
 }
 
 - (IBAction)updateAnticipatedYear:(UIStepper *)sender{
@@ -126,7 +164,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    availableYears = [[NSMutableArray alloc] init];
+    availableTerms = [[NSMutableArray alloc] initWithObjects:@"Fall", @"Spring", @"Summer", nil];
 
+    CFGregorianDate currentDate = CFAbsoluteTimeGetGregorianDate(CFAbsoluteTimeGetCurrent(), CFTimeZoneCopySystem());
+    int currentYear = currentDate.year;
+    for (int i=0; i<5; i++) {
+        [availableYears addObject:[NSString stringWithFormat:@"%i", currentYear+i]];
+    }
 }
 
 - (void)didReceiveMemoryWarning
