@@ -50,44 +50,7 @@
 
     GSCDAppDelegate *appDelegate;
 }
-/*
-- (void)textFieldDidEndEditing:(UITextField *)textField
-{
-    activeField = nil;
-	
-	// Save changes
-	// @TODO: maybe use tag or map tag to keyName?
-	//[_currentInquiry setValue:textField.text forKey:textField];
-    if(textField == Name) {
-        _currentInquiry.name = textField.text;
-    } else if (textField == BirthDate) {
-        _currentInquiry.dateOfBirth = textField.text;
-    } else if (textField == PhoneNum) {
-        _currentInquiry.phoneNumber = textField.text;
-    } else if (textField == Email) {
-        _currentInquiry.email = textField.text;
-    } else if (textField == Street) {
-        _currentInquiry.street = textField.text;
-    } else if (textField == AptNum) {
-        _currentInquiry.aptNumber = textField.text;
-    } else if (textField == Zip) {
-        _currentInquiry.zip = textField.text;
-    } else if (textField == City) {
-        _currentInquiry.city = textField.text;
-    } else if (textField == State) {
-        _currentInquiry.state = textField.text;
-    } else if (textField == Country) {
-        _currentInquiry.country = textField.text;
-    } else if (textField == Intstitution) {
-        _currentInquiry.undergraduateInstitution = textField.text;
-    } else if (textField == Major) {
-        _currentInquiry.undergraduateMajor = textField.text;
-    } else if (textField == Other) {
-        _currentInquiry.otherProgram = textField.text;
-    }
-    
-}
-*/
+
 - (IBAction)updateAnticipatedYear:(UIStepper *)sender{
     CFGregorianDate currentDate = CFAbsoluteTimeGetGregorianDate(CFAbsoluteTimeGetCurrent(), CFTimeZoneCopySystem());
     int intYear = currentDate.year;
@@ -98,6 +61,57 @@
 	
 	//self.currentInquiry.anticipatedYear = [year text];
 }
+
+// Call this method somewhere in your view controller setup code.
+- (void)registerForKeyboardNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillBeHidden:)
+                                                 name:UIKeyboardWillHideNotification object:nil];
+    
+}
+
+// Called when the UIKeyboardDidShowNotification is sent.
+- (void)keyboardWasShown:(NSNotification*)aNotification {
+    NSDictionary* info = [aNotification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+	float yPosition = scroller.contentOffset.y;
+    if (activeField.frame.origin.y > yPosition + 216 - kbSize.height || activeView.frame.origin.y > yPosition + 216 - kbSize.height ) {
+        
+        
+        
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:0.25];
+        self.view.center = CGPointMake(originalCenter.x, originalCenter.y - kbSize.height);
+        [UIView commitAnimations];
+        return;
+        
+    }
+}
+// Called when the UIKeyboardWillHideNotification is sent
+- (void)keyboardWillBeHidden:(NSNotification*)aNotification
+{
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.25];
+	self.view.center = originalCenter;
+    [UIView commitAnimations];
+}
+
+
+/** Hide keyboard when dragging */
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    [scrollView resignFirstResponder];
+	[activeField resignFirstResponder];
+	[textView resignFirstResponder];
+    [scroller resignFirstResponder];
+}
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

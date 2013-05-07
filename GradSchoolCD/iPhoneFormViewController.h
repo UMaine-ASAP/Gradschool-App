@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GSCDAppDelegate.h"
 #import "StudentInquiry.h"
+#import "iPadFormViewController.h"
 
 @interface iPhoneFormViewController : UIViewController
 

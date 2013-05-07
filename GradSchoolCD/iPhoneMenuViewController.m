@@ -27,18 +27,29 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    /*
     UIAlertView *addContact = [[UIAlertView alloc] initWithTitle:@"Import Contact?"
                                                          message:@"Would you like to import your contact from the Contacts App?"
                                                         delegate:nil
                                                cancelButtonTitle:@"No thanks"
                                                otherButtonTitles:@"Yes", nil];
     [addContact show];
+     */
+}
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 0){
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)unwindToIphoneMenuScreen:(UIStoryboardSegue *)segue{
+    
 }
 
 @end
