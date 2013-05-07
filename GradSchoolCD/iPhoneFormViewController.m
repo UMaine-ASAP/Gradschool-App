@@ -88,18 +88,12 @@
             break;
     }
 }
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view.
 
-- (IBAction)updateAnticipatedYear:(UIStepper *)sender{
-    CFGregorianDate currentDate = CFAbsoluteTimeGetGregorianDate(CFAbsoluteTimeGetCurrent(), CFTimeZoneCopySystem());
-    int intYear = currentDate.year;
-    int value = [sender value];
-    value = intYear+value;
-    NSString *valueText = [NSString stringWithFormat:@"%d",value];
-    [year setText:valueText];
-	
-	//self.currentInquiry.anticipatedYear = [year text];
 }
-
 // Call this method somewhere in your view controller setup code.
 - (void)registerForKeyboardNotifications
 {
@@ -111,42 +105,6 @@
                                              selector:@selector(keyboardWillBeHidden:)
                                                  name:UIKeyboardWillHideNotification object:nil];
     
-}
-
-// Called when the UIKeyboardDidShowNotification is sent.
-- (void)keyboardWasShown:(NSNotification*)aNotification {
-    NSDictionary* info = [aNotification userInfo];
-    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-    
-	float yPosition = scroller.contentOffset.y;
-    if (activeField.frame.origin.y > yPosition + 216 - kbSize.height || activeView.frame.origin.y > yPosition + 216 - kbSize.height ) {
-        
-        
-        
-        [UIView beginAnimations:nil context:NULL];
-        [UIView setAnimationDuration:0.25];
-        self.view.center = CGPointMake(originalCenter.x, originalCenter.y - kbSize.height);
-        [UIView commitAnimations];
-        return;
-        
-    }
-}
-// Called when the UIKeyboardWillHideNotification is sent
-- (void)keyboardWillBeHidden:(NSNotification*)aNotification
-{
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.25];
-	self.view.center = originalCenter;
-    [UIView commitAnimations];
-}
-
-
-/** Hide keyboard when dragging */
--(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
-    [scrollView resignFirstResponder];
-	[activeField resignFirstResponder];
-	[textView resignFirstResponder];
-    [scroller resignFirstResponder];
 }
 
 
