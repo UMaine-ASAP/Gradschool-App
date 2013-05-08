@@ -12,19 +12,8 @@
 
 @end
 
-@implementation AlphabeticalTableViewController {
-    NSMutableArray *sectionTitles;
-    NSMutableArray *organizeItemsIntoSections;
-}
+@implementation AlphabeticalTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {

@@ -10,10 +10,13 @@
 #import "GSCDAppDelegate.h"
 #import "StudentInquiry.h"
 #import "iPadFormViewController.h"
+#import "AlphabeticalTableViewController.h"
 
-@interface iPhoneFormViewController : UIViewController
+@interface iPhoneFormViewController : UIViewController <AlphabeticalTableViewControllerDelegate>
 
 -(IBAction)unwindToIphoneMainScreen:(UIStoryboardSegue *)segue;
+- (IBAction)openSelectStateModal:(id)sender;
+- (IBAction)openSelectCountryModal:(id)sender;
 
 /**
  * Sets all fields back to their default state

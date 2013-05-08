@@ -26,6 +26,7 @@
 		48DE57F416BB06800037334B /* graduate.png in Resources */ = {isa = PBXBuildFile; fileRef = 48DE57F316BB06800037334B /* graduate.png */; };
 		582D95861739C5C100B558E0 /* SelectStateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 582D95851739C5C100B558E0 /* SelectStateTableViewController.m */; };
 		582D95891739C69400B558E0 /* AlphabeticalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 582D95881739C69400B558E0 /* AlphabeticalTableViewController.m */; };
+		582D958C173AD44B00B558E0 /* SelectCountryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 582D958B173AD44B00B558E0 /* SelectCountryTableViewController.m */; };
 		58D716A81730861B00E32A27 /* keyboardToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58D716A71730861B00E32A27 /* keyboardToolbar.xib */; };
 		8473D81C17034E9F00EC88A6 /* iPadAppIconRetina.png in Resources */ = {isa = PBXBuildFile; fileRef = 8473D81B17034E9F00EC88A6 /* iPadAppIconRetina.png */; };
 		8473D81E1703645F00EC88A6 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8473D81D1703645F00EC88A6 /* Default-Portrait~ipad.png */; };
@@ -79,6 +80,8 @@
 		582D95851739C5C100B558E0 /* SelectStateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectStateTableViewController.m; sourceTree = "<group>"; };
 		582D95871739C69400B558E0 /* AlphabeticalTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlphabeticalTableViewController.h; sourceTree = "<group>"; };
 		582D95881739C69400B558E0 /* AlphabeticalTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlphabeticalTableViewController.m; sourceTree = "<group>"; };
+		582D958A173AD44B00B558E0 /* SelectCountryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCountryTableViewController.h; sourceTree = "<group>"; };
+		582D958B173AD44B00B558E0 /* SelectCountryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectCountryTableViewController.m; sourceTree = "<group>"; };
 		58D716A71730861B00E32A27 /* keyboardToolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = keyboardToolbar.xib; sourceTree = "<group>"; };
 		8473D81B17034E9F00EC88A6 /* iPadAppIconRetina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadAppIconRetina.png; path = ../iPadAppIconRetina.png; sourceTree = "<group>"; };
 		8473D81D1703645F00EC88A6 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~ipad.png"; path = "../Default-Portrait~ipad.png"; sourceTree = "<group>"; };
@@ -148,6 +151,8 @@
 				A9BD1A8D172F219D00B78206 /* list of programs */,
 				582D95841739C5C100B558E0 /* SelectStateTableViewController.h */,
 				582D95851739C5C100B558E0 /* SelectStateTableViewController.m */,
+				582D958A173AD44B00B558E0 /* SelectCountryTableViewController.h */,
+				582D958B173AD44B00B558E0 /* SelectCountryTableViewController.m */,
 				582D95871739C69400B558E0 /* AlphabeticalTableViewController.h */,
 				582D95881739C69400B558E0 /* AlphabeticalTableViewController.m */,
 			);
@@ -373,6 +378,7 @@
 				A99597F1173847E300395209 /* iPhoneMenuViewController.m in Sources */,
 				582D95861739C5C100B558E0 /* SelectStateTableViewController.m in Sources */,
 				582D95891739C69400B558E0 /* AlphabeticalTableViewController.m in Sources */,
+				582D958C173AD44B00B558E0 /* SelectCountryTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

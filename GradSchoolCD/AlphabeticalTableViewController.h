@@ -7,12 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+@protocol AlphabeticalTableViewControllerDelegate <NSObject>
+    @required
+    -(void)closeModalView;
+@end
 
-@interface AlphabeticalTableViewController : UITableViewController {
+
+@interface AlphabeticalTableViewController : UIViewController <UITableViewDataSource> {
     @protected
     NSMutableArray *items;
+    NSMutableArray *sectionTitles;
+    NSMutableArray *organizeItemsIntoSections;
+
 }
 
+@property id<AlphabeticalTableViewControllerDelegate> delegate;
 
 
 @end

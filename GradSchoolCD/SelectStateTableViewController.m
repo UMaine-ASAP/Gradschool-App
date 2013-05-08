@@ -16,15 +16,6 @@
     NSArray *availableStates;
 }
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
 
@@ -35,7 +26,8 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     items = [[NSMutableArray alloc] initWithObjects: @"Alabama", @"Alaska", @"Arizona", @"Arkansas", @"California", @"Colorado", @"Connecticut", @"District of Columbia", @"Delaware", @"Florida", @"Georgia", @"Hawaii", @"Idaho", @"Illinois", @"Indiana", @"Iowa", @"Kansas", @"Kentucky", @"Louisiana", @"Maine", @"Maryland", @"Massachusetts", @"Michigan", @"Minnesota", @"Mississippi", @"Missouri", @"Montana", @"Nebraska", @"Nevada", @"New Hampshire", @"New Jersey", @"New Mexico", @"New York", @"North Carolina", @"North Dakota", @"Ohio", @"Oklahoma", @"Oregon", @"Pennsylvania", @"Rhode Island", @"South Carolina", @"South Dakota", @"Tennessee", @"Texas", @"Utah", @"Vermont", @"Virginia", @"Washington", @"West Virginia", @"Wisconsin", @"Wyoming", @"Alberta", @"British Columbia", @"Manitoba", @"New Brunswick", @"Newfoundland and Labrador", @"Nova Scotia", @"Ontario", @"Prince Edward Island", @"Quebec", @"Saskatchewan", @"Northwest Territories", @"Nunavut", @"Yukon", nil];
     [super viewDidLoad];
-    
+    [sectionTitles insertObject:@"" atIndex:0];
+    [organizeItemsIntoSections insertObject:[[NSMutableArray alloc] initWithObjects:@"None", nil] atIndex:0];
 }
 /*
 // Override to support conditional editing of the table view.
@@ -80,12 +72,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    //[[self presentingViewController] dismissViewControllerAnimated:YES];
-     // ...
-     // Pass the selected object to the new view controller.
-     //[self.navigationController pushViewController:iPhoneFormViewController.h animated:YES];
-
+    [self.delegate closeModalView];
 }
 
 @end
