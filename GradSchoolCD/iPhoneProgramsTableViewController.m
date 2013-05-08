@@ -34,7 +34,7 @@
     [super viewDidLoad];
     
     UIAlertView *addPrograms = [[UIAlertView alloc] initWithTitle:@"Program Selection"
-                                                         message:@"Please select the programs you're interested in. You may select as many as you like."
+                                                         message:@"Please select the programs you're interested in. You may select as many as you like, but a minimum of one is required."
                                                         delegate:nil
                                                cancelButtonTitle:@"Okay"
                                                 otherButtonTitles: nil];

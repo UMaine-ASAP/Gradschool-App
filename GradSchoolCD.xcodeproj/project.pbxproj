@@ -38,6 +38,12 @@
 		A94ABD25173952D900406DB5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A94ABD24173952D900406DB5 /* Default-568h@2x.png */; };
 		A94ABD27173952E300406DB5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A94ABD26173952E300406DB5 /* Default@2x.png */; };
 		A94ABD29173952E800406DB5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A94ABD28173952E800406DB5 /* Default.png */; };
+		A94BA277173AF26600B60BA0 /* SubmitedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A94BA275173AF26600B60BA0 /* SubmitedViewController.m */; };
+		A94BA27C173AF45A00B60BA0 /* WebsiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A94BA27B173AF45A00B60BA0 /* WebsiteViewController.m */; };
+		A94BA27F173AFA3B00B60BA0 /* TwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A94BA27E173AFA3B00B60BA0 /* TwitterViewController.m */; };
+		A94BA282173AFA4900B60BA0 /* FacebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A94BA281173AFA4900B60BA0 /* FacebookViewController.m */; };
+		A94BA288173B009500B60BA0 /* like_us_facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = A94BA287173B009500B60BA0 /* like_us_facebook.png */; };
+		A94BA28A173B021600B60BA0 /* Twitter_follow_us.png in Resources */ = {isa = PBXBuildFile; fileRef = A94BA289173B021600B60BA0 /* Twitter_follow_us.png */; };
 		A99597F1173847E300395209 /* iPhoneMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A99597F0173847E300395209 /* iPhoneMenuViewController.m */; };
 		A9BD1A78172F09B400B78206 /* iPhoneFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BD1A77172F09B400B78206 /* iPhoneFormViewController.m */; };
 		A9BD1A7A172F09E300B78206 /* iPhoneStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9BD1A79172F09E300B78206 /* iPhoneStoryboard.storyboard */; };
@@ -93,6 +99,16 @@
 		A94ABD24173952D900406DB5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		A94ABD26173952E300406DB5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		A94ABD28173952E800406DB5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		A94BA274173AF26600B60BA0 /* SubmitedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitedViewController.h; sourceTree = "<group>"; };
+		A94BA275173AF26600B60BA0 /* SubmitedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitedViewController.m; sourceTree = "<group>"; };
+		A94BA27A173AF45A00B60BA0 /* WebsiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebsiteViewController.h; sourceTree = "<group>"; };
+		A94BA27B173AF45A00B60BA0 /* WebsiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebsiteViewController.m; sourceTree = "<group>"; };
+		A94BA27D173AFA3B00B60BA0 /* TwitterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterViewController.h; sourceTree = "<group>"; };
+		A94BA27E173AFA3B00B60BA0 /* TwitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterViewController.m; sourceTree = "<group>"; };
+		A94BA280173AFA4900B60BA0 /* FacebookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookViewController.h; sourceTree = "<group>"; };
+		A94BA281173AFA4900B60BA0 /* FacebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookViewController.m; sourceTree = "<group>"; };
+		A94BA287173B009500B60BA0 /* like_us_facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = like_us_facebook.png; path = ../like_us_facebook.png; sourceTree = "<group>"; };
+		A94BA289173B021600B60BA0 /* Twitter_follow_us.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Twitter_follow_us.png; path = ../Twitter_follow_us.png; sourceTree = "<group>"; };
 		A99597EF173847E300395209 /* iPhoneMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneMenuViewController.h; sourceTree = "<group>"; };
 		A99597F0173847E300395209 /* iPhoneMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPhoneMenuViewController.m; sourceTree = "<group>"; };
 		A9BD1A76172F09B400B78206 /* iPhoneFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneFormViewController.h; sourceTree = "<group>"; };
@@ -143,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				A9BD1A79172F09E300B78206 /* iPhoneStoryboard.storyboard */,
+				A94BA279173AF27100B60BA0 /* submitted */,
 				A9BD1A76172F09B400B78206 /* iPhoneFormViewController.h */,
 				A9BD1A77172F09B400B78206 /* iPhoneFormViewController.m */,
 				A99597EF173847E300395209 /* iPhoneMenuViewController.h */,
@@ -171,6 +188,8 @@
 		3FAB95661719B6B900966C3A /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				A94BA289173B021600B60BA0 /* Twitter_follow_us.png */,
+				A94BA287173B009500B60BA0 /* like_us_facebook.png */,
 				8473D81F1703646800EC88A6 /* Default-Portrait@2x~ipad.png */,
 				8473D81D1703645F00EC88A6 /* Default-Portrait~ipad.png */,
 				8473D81B17034E9F00EC88A6 /* iPadAppIconRetina.png */,
@@ -264,6 +283,21 @@
 			name = "Large Selction Box";
 			sourceTree = "<group>";
 		};
+		A94BA279173AF27100B60BA0 /* submitted */ = {
+			isa = PBXGroup;
+			children = (
+				A94BA274173AF26600B60BA0 /* SubmitedViewController.h */,
+				A94BA275173AF26600B60BA0 /* SubmitedViewController.m */,
+				A94BA27A173AF45A00B60BA0 /* WebsiteViewController.h */,
+				A94BA27B173AF45A00B60BA0 /* WebsiteViewController.m */,
+				A94BA27D173AFA3B00B60BA0 /* TwitterViewController.h */,
+				A94BA27E173AFA3B00B60BA0 /* TwitterViewController.m */,
+				A94BA280173AFA4900B60BA0 /* FacebookViewController.h */,
+				A94BA281173AFA4900B60BA0 /* FacebookViewController.m */,
+			);
+			name = submitted;
+			sourceTree = "<group>";
+		};
 		A9BD1A8D172F219D00B78206 /* list of programs */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +386,8 @@
 				A94ABD27173952E300406DB5 /* Default@2x.png in Resources */,
 				A94ABD29173952E800406DB5 /* Default.png in Resources */,
 				A911E894173ACBA70083229E /* ContactViewController.xib in Resources */,
+				A94BA288173B009500B60BA0 /* like_us_facebook.png in Resources */,
+				A94BA28A173B021600B60BA0 /* Twitter_follow_us.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +415,10 @@
 				582D95861739C5C100B558E0 /* SelectStateTableViewController.m in Sources */,
 				582D95891739C69400B558E0 /* AlphabeticalTableViewController.m in Sources */,
 				582D958C173AD44B00B558E0 /* SelectCountryTableViewController.m in Sources */,
+				A94BA277173AF26600B60BA0 /* SubmitedViewController.m in Sources */,
+				A94BA27C173AF45A00B60BA0 /* WebsiteViewController.m in Sources */,
+				A94BA27F173AFA3B00B60BA0 /* TwitterViewController.m in Sources */,
+				A94BA282173AFA4900B60BA0 /* FacebookViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

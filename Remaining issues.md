@@ -1,9 +1,6 @@
-##Remaining issues to be dealt with
+##Remaining (as of 8May2013)
 
-- Build iPhone version
-	- Link address book to AlertView
-		- Place approved data in text fields from contact
-	- Link text fields to CoreData
-	- Confirm navigation is functioning correctly
-- iPad Anticipated year is not shown by default
-- Integration with Settings bundle in progress
+- The Weblinks are all working. When you hit 'back' from a weblink, it will bring you back to the main menu, regardless of where you start. 
+- To do:
+	- Link data to Student Inquiry, Submit button.
+- My tests didn't show any bugs, other than issues Tim fixed with scrolling, keyboard, etc.

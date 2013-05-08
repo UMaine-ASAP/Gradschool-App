@@ -64,6 +64,12 @@
     // Modal views
     SelectStateTableViewController *sstvc;
     SelectCountryTableViewController *sctvc;
+    
+    //Shows selection from table view
+
+    IBOutlet UILabel *selectedState;
+    IBOutlet UILabel *selectedCountry;
+    
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)thePickerView {
@@ -97,20 +103,6 @@
             break;
     }
 }
-// Call this method somewhere in your view controller setup code.
-- (void)registerForKeyboardNotifications
-{
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardWasShown:)
-                                                 name:UIKeyboardDidShowNotification object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardWillBeHidden:)
-                                                 name:UIKeyboardWillHideNotification object:nil];
-    
-}
-
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -184,7 +176,147 @@
     sctvc.delegate = self;
     [[self navigationController] presentViewController:sctvc animated:YES completion:^{
     }];
-
 }
+
+# pragma mark - Adjust Keyboard
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    activeField = textField;
+    /*
+    // Load inputaccessory view
+    [textField setInputAccessoryView:keyboardToolbar];
+    for (int i=0; i<[allTextFields count]; i++) {
+        if ([allTextFields objectAtIndex:i]==textField) {
+            if (i==[allTextFields count]-1) {
+                toolbarActionButton.title = @"Done";
+                [toolbarActionButton setStyle:UIBarButtonItemStyleDone];
+            } else {
+                [toolbarActionButton setTitle:@"Close"];
+                [toolbarActionButton setStyle:UIBarButtonItemStyleBordered];
+            }
+            //            [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+        }
+    }
+    */
+    //    [scroller setContentOffset:CGPointMake(0,textField.center.y-60) animated:YES];
+    [textField becomeFirstResponder];
+}
+
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    activeField = nil;
+	
+	// Save changes
+	// @TODO: maybe use tag or map tag to keyName?
+/*	//[_currentInquiry setValue:textField.text forKey:textField];
+    if(textField == Name) {
+        _currentInquiry.name = textField.text;
+    } else if (textField == BirthDate) {
+        _currentInquiry.dateOfBirth = textField.text;
+    } else if (textField == PhoneNum) {
+        _currentInquiry.phoneNumber = textField.text;
+    } else if (textField == Email) {
+        _currentInquiry.email = textField.text;
+    } else if (textField == Street) {
+        _currentInquiry.street = textField.text;
+    } else if (textField == AptNum) {
+        _currentInquiry.aptNumber = textField.text;
+    } else if (textField == Zip) {
+        _currentInquiry.zip = textField.text;
+    } else if (textField == City) {
+        _currentInquiry.city = textField.text;
+    } else if (textField == State) {
+        _currentInquiry.state = textField.text;
+    } else if (textField == Country) {
+        _currentInquiry.country = textField.text;
+    } else if (textField == Intstitution) {
+        _currentInquiry.undergraduateInstitution = textField.text;
+    } else if (textField == Major) {
+        _currentInquiry.undergraduateMajor = textField.text;
+    } else if (textField == Other) {
+        _currentInquiry.otherProgram = textField.text;
+    }
+    */
+}
+
+
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    activeView = textView;
+    /*
+    // Load inputaccessoryview
+    [textView setInputAccessoryView:keyboardToolbar];
+    for (int i=0; i<[allTextFields count]; i++) {
+        if ([allTextFields objectAtIndex:i]==textView) {
+            if (i==[allTextFields count]-1) {
+                toolbarActionButton.title = @"Done";
+                [toolbarActionButton setStyle:UIBarButtonItemStyleDone];
+            }
+            //            [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+        }
+    }*/
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    activeView = nil;
+}
+
+// Call this method somewhere in your view controller setup code.
+- (void)registerForKeyboardNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillBeHidden:)
+                                                 name:UIKeyboardWillHideNotification object:nil];
+    
+}
+
+// Called when the UIKeyboardDidShowNotification is sent.
+- (void)keyboardWasShown:(NSNotification*)aNotification {
+    NSDictionary* info = [aNotification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+	float yPosition = scroller.contentOffset.y;
+    if (activeField.frame.origin.y > yPosition + 950 - kbSize.height || activeView.frame.origin.y > yPosition + 950 - kbSize.height ) {
+        
+        
+        
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:0.25];
+        self.view.center = CGPointMake(originalCenter.x, originalCenter.y - kbSize.height);
+        [UIView commitAnimations];
+        return;
+        
+    }
+}
+// Called when the UIKeyboardWillHideNotification is sent
+- (void)keyboardWillBeHidden:(NSNotification*)aNotification
+{
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.25];
+	self.view.center = originalCenter;
+    [UIView commitAnimations];
+}
+
+
+/** Hide keyboard when dragging */
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    [scrollView resignFirstResponder];
+	[activeField resignFirstResponder];
+	[textView resignFirstResponder];
+    [scroller resignFirstResponder];
+}
+//end of keyboard code
+
+
+
+
+
 
 @end

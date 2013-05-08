@@ -18,7 +18,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97x-hC-tqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1437" y="475"/>
+            <point key="canvasLocation" x="-1135" y="456"/>
         </scene>
         <!--I Pad Form View Controller-->
         <scene sceneID="l4X-KP-olk">
@@ -806,51 +806,6 @@
     <resources>
         <image name="graduate.png" width="245" height="99"/>
     </resources>
-    <classes>
-        <class className="GSCDSelectionBox" superclassName="UIScrollView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GSCDSelectionBox.h"/>
-            <relationships>
-                <relationship kind="action" name="viewWasTouched:" candidateClass="UITapGestureRecognizer"/>
-            </relationships>
-        </class>
-        <class className="UIStoryboardSegue" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
-        </class>
-        <class className="iPadFormViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/iPadFormViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="closeKeyboard:"/>
-                <relationship kind="action" name="gotoReviewScreen:"/>
-                <relationship kind="action" name="nextField:"/>
-                <relationship kind="action" name="prevField:"/>
-                <relationship kind="action" name="semesterSelect:" candidateClass="UISegmentedControl"/>
-                <relationship kind="action" name="unwindFromDisplayToEntryScreenSubmit:" candidateClass="UIStoryboardSegue"/>
-                <relationship kind="action" name="updateAnticipatedYear:" candidateClass="UIStepper"/>
-            </relationships>
-        </class>
-        <class className="iPadReviewViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/iPadReviewViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="previousView:"/>
-                <relationship kind="action" name="submitData:"/>
-                <relationship kind="outlet" name="anticipatedYear" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="aptNum" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="birthDate" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="city" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="country" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="emailAdress" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="entryTerm" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="institution" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="major" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="phoneNum" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="programsInterestedIn" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="state" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="street" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="zip" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
