@@ -32,6 +32,7 @@
 		8473D8201703646800EC88A6 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8473D81F1703646800EC88A6 /* Default-Portrait@2x~ipad.png */; };
 		84A5D9C0170348950053E98B /* iPadAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A5D9BF170348950053E98B /* iPadAppIcon.png */; };
 		84A5D9C2170348D00053E98B /* iPadAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A5D9C1170348D00053E98B /* iPadAppIcon.png */; };
+		A911E894173ACBA70083229E /* ContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A911E893173ACBA70083229E /* ContactViewController.xib */; };
 		A91A0DE9173009C800D6AF4F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A91A0DE8173009C800D6AF4F /* Settings.bundle */; };
 		A94ABD25173952D900406DB5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A94ABD24173952D900406DB5 /* Default-568h@2x.png */; };
 		A94ABD27173952E300406DB5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A94ABD26173952E300406DB5 /* Default@2x.png */; };
@@ -84,6 +85,7 @@
 		8473D81F1703646800EC88A6 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait@2x~ipad.png"; path = "../Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
 		84A5D9BF170348950053E98B /* iPadAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPadAppIcon.png; sourceTree = "<group>"; };
 		84A5D9C1170348D00053E98B /* iPadAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadAppIcon.png; path = ../iPadAppIcon.png; sourceTree = "<group>"; };
+		A911E893173ACBA70083229E /* ContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactViewController.xib; sourceTree = "<group>"; };
 		A91A0DE8173009C800D6AF4F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = GradSchoolCD/Settings.bundle; sourceTree = "<group>"; };
 		A94ABD24173952D900406DB5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		A94ABD26173952E300406DB5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 			children = (
 				A9D9B89B17382C5900F42C40 /* iPhoneImportContactViewController.h */,
 				A9D9B89C17382C5900F42C40 /* iPhoneImportContactViewController.m */,
+				A911E893173ACBA70083229E /* ContactViewController.xib */,
 				A9D9B8A117382CAE00F42C40 /* Person.h */,
 				A9D9B8A217382CAE00F42C40 /* Person.m */,
 			);
@@ -343,6 +346,7 @@
 				A94ABD25173952D900406DB5 /* Default-568h@2x.png in Resources */,
 				A94ABD27173952E300406DB5 /* Default@2x.png in Resources */,
 				A94ABD29173952E800406DB5 /* Default.png in Resources */,
+				A911E894173ACBA70083229E /* ContactViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
