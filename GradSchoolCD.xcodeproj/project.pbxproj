@@ -24,6 +24,8 @@
 		488E520816652546006FEE11 /* GSCDSelectLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 488E520716652546006FEE11 /* GSCDSelectLabel.m */; };
 		48A6F422166E47C000E36813 /* StudentInquiry.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A6F421166E47C000E36813 /* StudentInquiry.m */; };
 		48DE57F416BB06800037334B /* graduate.png in Resources */ = {isa = PBXBuildFile; fileRef = 48DE57F316BB06800037334B /* graduate.png */; };
+		582D95861739C5C100B558E0 /* SelectStateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 582D95851739C5C100B558E0 /* SelectStateTableViewController.m */; };
+		582D95891739C69400B558E0 /* AlphabeticalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 582D95881739C69400B558E0 /* AlphabeticalTableViewController.m */; };
 		58D716A81730861B00E32A27 /* keyboardToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58D716A71730861B00E32A27 /* keyboardToolbar.xib */; };
 		8473D81C17034E9F00EC88A6 /* iPadAppIconRetina.png in Resources */ = {isa = PBXBuildFile; fileRef = 8473D81B17034E9F00EC88A6 /* iPadAppIconRetina.png */; };
 		8473D81E1703645F00EC88A6 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8473D81D1703645F00EC88A6 /* Default-Portrait~ipad.png */; };
@@ -72,6 +74,10 @@
 		48A6F420166E47C000E36813 /* StudentInquiry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentInquiry.h; sourceTree = "<group>"; };
 		48A6F421166E47C000E36813 /* StudentInquiry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentInquiry.m; sourceTree = "<group>"; };
 		48DE57F316BB06800037334B /* graduate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graduate.png; sourceTree = "<group>"; };
+		582D95841739C5C100B558E0 /* SelectStateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectStateTableViewController.h; sourceTree = "<group>"; };
+		582D95851739C5C100B558E0 /* SelectStateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectStateTableViewController.m; sourceTree = "<group>"; };
+		582D95871739C69400B558E0 /* AlphabeticalTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlphabeticalTableViewController.h; sourceTree = "<group>"; };
+		582D95881739C69400B558E0 /* AlphabeticalTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlphabeticalTableViewController.m; sourceTree = "<group>"; };
 		58D716A71730861B00E32A27 /* keyboardToolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = keyboardToolbar.xib; sourceTree = "<group>"; };
 		8473D81B17034E9F00EC88A6 /* iPadAppIconRetina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadAppIconRetina.png; path = ../iPadAppIconRetina.png; sourceTree = "<group>"; };
 		8473D81D1703645F00EC88A6 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~ipad.png"; path = "../Default-Portrait~ipad.png"; sourceTree = "<group>"; };
@@ -138,6 +144,10 @@
 				A99597F0173847E300395209 /* iPhoneMenuViewController.m */,
 				A9D9B8A017382C6400F42C40 /* import contact */,
 				A9BD1A8D172F219D00B78206 /* list of programs */,
+				582D95841739C5C100B558E0 /* SelectStateTableViewController.h */,
+				582D95851739C5C100B558E0 /* SelectStateTableViewController.m */,
+				582D95871739C69400B558E0 /* AlphabeticalTableViewController.h */,
+				582D95881739C69400B558E0 /* AlphabeticalTableViewController.m */,
 			);
 			name = "iPhone views";
 			sourceTree = "<group>";
@@ -357,6 +367,8 @@
 				A9D9B89E17382C5900F42C40 /* iPhoneImportContactViewController.m in Sources */,
 				A9D9B8A317382CAE00F42C40 /* Person.m in Sources */,
 				A99597F1173847E300395209 /* iPhoneMenuViewController.m in Sources */,
+				582D95861739C5C100B558E0 /* SelectStateTableViewController.m in Sources */,
+				582D95891739C69400B558E0 /* AlphabeticalTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

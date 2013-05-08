@@ -157,7 +157,6 @@
         
         // Add programs to list
         [organizeProgramsIntoSections addObject:programsInSection];
-
     }
 }
 
